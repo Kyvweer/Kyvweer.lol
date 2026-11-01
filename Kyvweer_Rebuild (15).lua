@@ -19839,7 +19839,7 @@ return bd.c
 end
 end
 do -- be
-local function fn35()local I= tbl17 .i().atomic; tbl17 .aZ();local W,N,P= tbl17 .aU(), tbl17 .aW(), tbl17 .aY();return{Aimbot=W.buildConfig(),SilentAim=N.buildConfig(),Triggerbot=P.buildConfig(),Ragebot={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="Gun",ShootAttempts=1,Bait=false,PrioritizeHackers=false,Stability=0.15,ShootFrames=1,Weapons={Priority=I({"Primary","Secondary","Melee"}),Enabled={Primary=true,Secondary=true,Melee=true},OnEmpty="SwapOrReload"},Evasion={Mode="Random",Random={AnchorFromCharacter=false,BaseRadius=100,RadiusRandomFactor=0.5},ProjectileBreaker={DepthForward={Min=0,Max=4},DepthForwardFrequency=5,DepthUp={Min=0,Max=5.5},DepthUpFrequency=5,RepositionInterval=0.3,FallbackAnchorFromCharacter=false,FallbackBaseRadius=100,FallbackRadiusRandomFactor=0.5},Translocate={Offset=-5}},UtilizeHealthLead=false,SlingBypass={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},Mode="Follow",TargetMode="Closest",HideAvatar=true,AutoShoot=true,StickHeight=2,AttackRange=8,ShotCooldown=0.05,FollowDistance=2,FollowHeight=2,FollowLerp=0.5,FollowPredict=true,FollowLead=0.15,StalkDistance=6,StalkHeight=3,StalkBehind=true,HoverHeight=8,OrbitRadius=5,OrbitSpeed=200,OrbitHeight=0,RandomRadius=8,UseTargetVel=true},DaggerBypass={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false}},ExpandHitbox={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},HitboxSize=30,Transparency=0.5,MaxEnemies=10,TeamCheck=false,SafeDistance=true,SafeDist=5,PatchRaycast=true},AntiAim={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},Mode="RandomSpin",Speed=5000,PitchAngle=45,YawAngle=45,JitterPitch=true,JitterYaw=true,StaticYaw=90,StaticPitch=0,CustomYaw=180,CustomPitch=0},Translocation={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},Frequency=256,OffsetDist=100,OffsetMode="Ahead",OffsetY=0,SnapBack=true,Jitter=false,FakeVel=true},FakePosition={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},RangeXZ=150,MinY=10,MaxY=100,DesyncVelocity=false,VelRange=5000},VoidSpam={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},AttackTime=0.01,HideTime=0.25,VoidDistance=2500,AutoShoot=true,Mode="Random",RestoreClient=true,ZeroVel=true},Weapon="Primary",PreferProjectile=true,SwapWhenEmpty=true,PriorityVoided=true,PriorityAttackers=true},Flickbot={Enabled=false,Keybind={State=false,Kind="Hold",Bind=nil,ShowInList=true,Invisible=false},Shoot=false,ShotDelay=0,Cooldown=250,FlickDuration=110,Curvature=12,Humanness=30}};end
+local function fn35()local I= tbl17 .i().atomic; tbl17 .aZ();local W,N,P= tbl17 .aU(), tbl17 .aW(), tbl17 .aY();return{Aimbot=W.buildConfig(),SilentAim=N.buildConfig(),Triggerbot=P.buildConfig(),Ragebot={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="Gun",ShootAttempts=15,Bait=false,TPUnder=true,UnderOffset=-2,Headshot=true,AntiLegit=true,GodMode=true,AntiKnife=true,AntiExplosives=true,EscapeDist=150,PrioritizeHackers=false,Stability=0.05,ShootFrames=1,Weapons={Priority=I({"Primary","Secondary","Melee"}),Enabled={Primary=true,Secondary=true,Melee=true},OnEmpty="SwapOrReload"},Evasion={Mode="Random",Random={AnchorFromCharacter=false,BaseRadius=100,RadiusRandomFactor=0.5},ProjectileBreaker={DepthForward={Min=0,Max=4},DepthForwardFrequency=5,DepthUp={Min=0,Max=5.5},DepthUpFrequency=5,RepositionInterval=0.3,FallbackAnchorFromCharacter=false,FallbackBaseRadius=100,FallbackRadiusRandomFactor=0.5},Translocate={Offset=-5}},UtilizeHealthLead=false,SlingBypass={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},Mode="Follow",TargetMode="Closest",HideAvatar=true,AutoShoot=true,StickHeight=2,AttackRange=8,ShotCooldown=0.05,FollowDistance=2,FollowHeight=2,FollowLerp=0.5,FollowPredict=true,FollowLead=0.15,StalkDistance=6,StalkHeight=3,StalkBehind=true,HoverHeight=8,OrbitRadius=5,OrbitSpeed=200,OrbitHeight=0,RandomRadius=8,UseTargetVel=true},DaggerBypass={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false}},ExpandHitbox={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},HitboxSize=30,Transparency=0.5,MaxEnemies=10,TeamCheck=false,SafeDistance=true,SafeDist=5,PatchRaycast=true},AntiAim={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},Mode="RandomSpin",Speed=5000,PitchAngle=45,YawAngle=45,JitterPitch=true,JitterYaw=true,StaticYaw=90,StaticPitch=0,CustomYaw=180,CustomPitch=0},Translocation={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},Frequency=256,OffsetDist=100,OffsetMode="Ahead",OffsetY=0,SnapBack=true,Jitter=false,FakeVel=true},FakePosition={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},OffsetX=0,OffsetY=-5,OffsetZ=0,ClientSurface=true,UnderDepth=3,RangeXZ=150,MinY=10,MaxY=100,DesyncVelocity=false,VelRange=5000},VoidSpam={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},AttackTime=0.01,HideTime=0.25,VoidDistance=2500,AutoShoot=true,Mode="Random",RestoreClient=true,ZeroVel=true},TargetHUD={Enabled=true,PosX=50,PosY=70,Scale=1,ItemScale=1.7,Highlight=false,HighlightFill={1,1,1},HighlightOutline={1,1,1},HighlightType="AlwaysOnTop"},Arcade={AutoRespawn=false,AutoAmmo=false,RespawnDelay=0.5,AmmoInterval=0.25},CounterUE={Enabled=false,Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false},DetectThreshold=12,StickHeight=1,AutoShoot=true,Predict=true,MaxDistance=5000,AntiDamage=true,GodHeal=true,ShootAttempts=20},Weapon="Primary",PreferProjectile=true,SwapWhenEmpty=true,PriorityVoided=true,PriorityAttackers=true},Flickbot={Enabled=false,Keybind={State=false,Kind="Hold",Bind=nil,ShowInList=true,Invisible=false},Shoot=false,ShotDelay=0,Cooldown=250,FlickDuration=110,Curvature=12,Humanness=30}};end
 
 tbl17.be = function()
 local be = tbl17.cache.be
@@ -58962,7 +58962,7 @@ return ie.c
 end
 end
 do -- ih
-local function fn35() tbl17 .aE();local I= tbl17 .h6();local function l(W)I(W,"Enable Ragebot",{"Always","Toggle","Hold"},{"Ragebot"},true);W:AddDropdown({Label="Mode",Options={"Gun","Melee","Auto"},Config={"Ragebot","Mode"}});W:AddSlider({Label="Shoot Attempts",Min=1,Max=10,Config={"Ragebot","ShootAttempts"}});W:AddToggle({Label="Bait",Config={"Ragebot","Bait"}});W:AddToggle({Label="Prioritize Hackers",Config={"Ragebot","PrioritizeHackers"}});W:AddSlider({Label="Stability",Min=0,Max=1.5,Step=0.001,Config={"Ragebot","Stability"}});W:AddSlider({Label="Shoot Frames",Min=1,Max=5,Config={"Ragebot","ShootFrames"}});W:AddDropdown({Label="Weapon",Options={"Primary","Secondary","Melee"},Config={"Ragebot","Weapon"}});W:AddToggle({Label="Prefer Projectile",Config={"Ragebot","PreferProjectile"}});W:AddToggle({Label="Swap When Empty",Config={"Ragebot","SwapWhenEmpty"}});end;local function I(W)local N={"Primary","Secondary","Melee"};for P,P in N,nil,nil do W:AddToggle({Label=string.format("%s Enabled",tostring(P)),Config={"Ragebot","Weapons","Enabled",P}});end;W:AddOrderedList({Label="Weapon Priority",Items=N,Default=N,Config={"Ragebot","Weapons","Priority"}});W:AddDropdown({Label="On Empty",Options={"Reload","Swap","SwapOrReload"},Labels={SwapOrReload="Swap or Reload"},Config={"Ragebot","Weapons","OnEmpty"}});end;local function W(N,P)local a=N:AddGroup({Source=P,Option="ProjectileBreaker"});a:AddRangeSlider({Label="Forward Depth",Min=0,Max=10,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthForward"}});a:AddSlider({Label="Forward Frequency",Min=0,Max=20,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthForwardFrequency"}});a:AddRangeSlider({Label="Upward Depth",Min=0,Max=10,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthUp"}});a:AddSlider({Label="Upward Frequency",Min=0,Max=20,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthUpFrequency"}});a:AddSlider({Label="Reposition Interval (s)",Min=0.05,Max=2,Step=0.01,Config={"Ragebot","Evasion","ProjectileBreaker","RepositionInterval"}});a:AddToggle({Label="Fallback Character Origin",Config={"Ragebot","Evasion","ProjectileBreaker","FallbackAnchorFromCharacter"}});a:AddSlider({Label="Fallback Radius",Min=5,Max=100000000,Config={"Ragebot","Evasion","ProjectileBreaker","FallbackBaseRadius"}});a:AddSlider({Label="Fallback Random Factor",Min=0,Max=1,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","FallbackRadiusRandomFactor"}});end;local function N(P)local a=P:AddDropdown({Label="Evasion Mode",Options={"Off","Random","Translocate","ProjectileBreaker"},Labels={ProjectileBreaker="Projectile Breaker"},Config={"Ragebot","Evasion","Mode"}});local e=P:AddGroup({Source=a,Option="Random"});e:AddToggle({Label="Character Origin",Config={"Ragebot","Evasion","Random","AnchorFromCharacter"}});e:AddSlider({Label="Base Radius",Min=5,Max=100000000,Config={"Ragebot","Evasion","Random","BaseRadius"}});e:AddSlider({Label="Random Factor",Min=0,Max=1,Step=0.1,Config={"Ragebot","Evasion","Random","RadiusRandomFactor"}});P:AddGroup({Source=a,Option="Translocate"}):AddSlider({Label="Offset",Min=-5,Max=5,Step=0.1,Config={"Ragebot","Evasion","Translocate","Offset"}});W(P,a);end;return function(W)l(W:AddSection({Title="Activation",Side="left"}));I(W:AddSection({Title="Weapon Strategy",Side="left"}));N(W:AddSection({Title="Evasion",Side="right"}));local SB=W:AddSection({Title="Sling Bypass",Side="right"});local h6=tbl17.h6();h6(SB,"Enable Sling Bypass",{"Always","Toggle","Hold"},{"Ragebot","SlingBypass"},true,"Sling Bypass");SB:AddDropdown({Label="Mode",Options={"Follow","Stalk","Hover","Rush","Stick","OrbitTarget","RandomAroundTarget","Visual"},Config={"Ragebot","SlingBypass","Mode"}});SB:AddDropdown({Label="Target Mode",Options={"Closest","Random","Weakest","Strongest"},Config={"Ragebot","SlingBypass","TargetMode"}});SB:AddToggle({Label="Hide Avatar",Config={"Ragebot","SlingBypass","HideAvatar"}});SB:AddToggle({Label="Auto Shoot",Config={"Ragebot","SlingBypass","AutoShoot"}});SB:AddSlider({Label="Follow Distance",Min=0,Max=30,Step=0.1,Config={"Ragebot","SlingBypass","FollowDistance"}});SB:AddSlider({Label="Follow Height",Min=-10,Max=20,Step=0.1,Config={"Ragebot","SlingBypass","FollowHeight"}});SB:AddSlider({Label="Attack Range",Min=1,Max=50,Step=0.5,Config={"Ragebot","SlingBypass","AttackRange"}});SB:AddSlider({Label="Orbit Radius",Min=1,Max=50,Step=0.5,Config={"Ragebot","SlingBypass","OrbitRadius"}});SB:AddSlider({Label="Orbit Speed",Min=10,Max=1000,Config={"Ragebot","SlingBypass","OrbitSpeed"}});local DB=W:AddSection({Title="Dagger Bypass",Side="right"});local h6d=tbl17.h6();h6d(DB,"Enable Dagger Bypass",{"Always","Toggle","Hold"},{"Ragebot","DaggerBypass"},true,"Dagger Bypass");local EH=W:AddSection({Title="Expand Hitbox",Side="left"});local h6e=tbl17.h6();h6e(EH,"Enable Expand Hitbox",{"Always","Toggle","Hold"},{"Ragebot","ExpandHitbox"},true,"Expand Hitbox");EH:AddSlider({Label="Hitbox Size",Min=1,Max=100,Step=0.5,Config={"Ragebot","ExpandHitbox","HitboxSize"}});EH:AddSlider({Label="Transparency",Min=0,Max=1,Step=0.05,Config={"Ragebot","ExpandHitbox","Transparency"}});EH:AddSlider({Label="Max Enemies",Min=1,Max=30,Config={"Ragebot","ExpandHitbox","MaxEnemies"}});EH:AddToggle({Label="Team Check",Config={"Ragebot","ExpandHitbox","TeamCheck"}});EH:AddToggle({Label="Safe Distance",Config={"Ragebot","ExpandHitbox","SafeDistance"}});EH:AddSlider({Label="Safe Dist",Min=1,Max=30,Step=0.5,Config={"Ragebot","ExpandHitbox","SafeDist"}});local AA=W:AddSection({Title="Anti Aim",Side="left"});local h6a=tbl17.h6();h6a(AA,"Enable Anti Aim",{"Always","Toggle","Hold"},{"Ragebot","AntiAim"},true,"Anti Aim");AA:AddDropdown({Label="Mode",Options={"Spin","Jitter","Static","Up","Down","Side","RandomSpin","Custom"},Config={"Ragebot","AntiAim","Mode"}});AA:AddSlider({Label="Speed (deg/s)",Min=100,Max=5000,Config={"Ragebot","AntiAim","Speed"}});AA:AddSlider({Label="Pitch Angle",Min=0,Max=90,Config={"Ragebot","AntiAim","PitchAngle"}});AA:AddSlider({Label="Yaw Angle",Min=0,Max=180,Config={"Ragebot","AntiAim","YawAngle"}});AA:AddToggle({Label="Jitter Pitch",Config={"Ragebot","AntiAim","JitterPitch"}});AA:AddToggle({Label="Jitter Yaw",Config={"Ragebot","AntiAim","JitterYaw"}});AA:AddSlider({Label="Static Yaw",Min=-180,Max=180,Config={"Ragebot","AntiAim","StaticYaw"}});AA:AddSlider({Label="Static Pitch",Min=-90,Max=90,Config={"Ragebot","AntiAim","StaticPitch"}});AA:AddSlider({Label="Custom Yaw",Min=-180,Max=180,Config={"Ragebot","AntiAim","CustomYaw"}});AA:AddSlider({Label="Custom Pitch",Min=-90,Max=90,Config={"Ragebot","AntiAim","CustomPitch"}});local TL=W:AddSection({Title="Translocation",Side="right"});local h6t=tbl17.h6();h6t(TL,"Enable Translocation",{"Always","Toggle","Hold"},{"Ragebot","Translocation"},true,"Translocation");TL:AddDropdown({Label="Offset Mode",Options={"Ahead","Behind","Up","Down","Random","Side"},Config={"Ragebot","Translocation","OffsetMode"}});TL:AddSlider({Label="Frequency",Min=1,Max=512,Config={"Ragebot","Translocation","Frequency"}});TL:AddSlider({Label="Offset Distance",Min=1,Max=500,Step=1,Config={"Ragebot","Translocation","OffsetDist"}});TL:AddSlider({Label="Offset Y",Min=-50,Max=50,Step=0.5,Config={"Ragebot","Translocation","OffsetY"}});TL:AddToggle({Label="Snap Back",Config={"Ragebot","Translocation","SnapBack"}});TL:AddToggle({Label="Jitter",Config={"Ragebot","Translocation","Jitter"}});TL:AddToggle({Label="Fake Velocity",Config={"Ragebot","Translocation","FakeVel"}});local FP=W:AddSection({Title="Fake Position",Side="right"});local h6f=tbl17.h6();h6f(FP,"Enable Fake Position",{"Always","Toggle","Hold"},{"Ragebot","FakePosition"},true,"Fake Position");FP:AddSlider({Label="XZ Range",Min=10,Max=500,Step=1,Config={"Ragebot","FakePosition","RangeXZ"}});FP:AddSlider({Label="Min Y Offset",Min=0,Max=200,Step=1,Config={"Ragebot","FakePosition","MinY"}});FP:AddSlider({Label="Max Y Offset",Min=1,Max=300,Step=1,Config={"Ragebot","FakePosition","MaxY"}});FP:AddToggle({Label="Velocity Desync",Tooltip="Also spoofs AssemblyLinearVelocity like Meow Desync.",Config={"Ragebot","FakePosition","DesyncVelocity"}});FP:AddSlider({Label="Velocity Range",Min=100,Max=20000,Config={"Ragebot","FakePosition","VelRange"}});local VS=W:AddSection({Title="Void Spam",Side="left"});local h6v=tbl17.h6();h6v(VS,"Enable Void Spam",{"Always","Toggle","Hold"},{"Ragebot","VoidSpam"},true,"Void Spam");VS:AddDropdown({Label="Mode",Options={"Random","Spiral","Wave","Chaos","Strobe"},Config={"Ragebot","VoidSpam","Mode"}});VS:AddSlider({Label="Attack Time (s)",Min=0.01,Max=1,Step=0.01,Config={"Ragebot","VoidSpam","AttackTime"}});VS:AddSlider({Label="Hide Time (s)",Min=0.01,Max=2,Step=0.01,Config={"Ragebot","VoidSpam","HideTime"}});VS:AddSlider({Label="Void Distance",Min=100,Max=50000,Config={"Ragebot","VoidSpam","VoidDistance"}});VS:AddToggle({Label="Auto Shoot",Config={"Ragebot","VoidSpam","AutoShoot"}});VS:AddToggle({Label="Restore Client View",Tooltip="Snap local view back after void offsets.",Config={"Ragebot","VoidSpam","RestoreClient"}});VS:AddToggle({Label="Zero Velocity on Attack",Config={"Ragebot","VoidSpam","ZeroVel"}});end;end
+local function fn35() tbl17 .aE();local I= tbl17 .h6();local function l(W)I(W,"Enable Ragebot",{"Always","Toggle","Hold"},{"Ragebot"},true);W:AddDropdown({Label="Mode",Options={"Gun","Melee","Auto"},Config={"Ragebot","Mode"}});W:AddSlider({Label="Shoot Attempts",Min=1,Max=10,Config={"Ragebot","ShootAttempts"}});W:AddToggle({Label="Bait",Config={"Ragebot","Bait"}});W:AddToggle({Label="TP Under Enemy",Tooltip="Se tepea debajo del enemigo para matarlo al instante.",Config={"Ragebot","TPUnder"}});W:AddToggle({Label="Headshot Only",Tooltip="Ragebot siempre apunta y dispara a la cabeza.",Config={"Ragebot","Headshot"}});W:AddSlider({Label="Under Offset",Min=-15,Max=-1,Step=0.5,Config={"Ragebot","UnderOffset"}});W:AddToggle({Label="Anti Legit / Godmode",Tooltip="Con Ragebot on: proteccion de daño.",Config={"Ragebot","AntiLegit"}});W:AddToggle({Label="God Mode",Tooltip="Refuerzo de proteccion de daño.",Config={"Ragebot","GodMode"}});W:AddToggle({Label="Anti Knife",Tooltip="Despues de tepear/disparar se aleja lejos para que no te maten a cuchillo.",Config={"Ragebot","AntiKnife"}});W:AddToggle({Label="Anti Explosives",Tooltip="Huye de molotov, minas, subspace y similares cerca de ti.",Config={"Ragebot","AntiExplosives"}});W:AddSlider({Label="Escape Distance",Min=40,Max=400,Step=5,Config={"Ragebot","EscapeDist"}});W:AddToggle({Label="Prioritize Hackers",Config={"Ragebot","PrioritizeHackers"}});W:AddSlider({Label="Stability",Min=0,Max=1.5,Step=0.001,Config={"Ragebot","Stability"}});W:AddSlider({Label="Shoot Frames",Min=1,Max=5,Config={"Ragebot","ShootFrames"}});W:AddDropdown({Label="Weapon",Options={"Primary","Secondary","Melee"},Config={"Ragebot","Weapon"}});W:AddToggle({Label="Prefer Projectile",Config={"Ragebot","PreferProjectile"}});W:AddToggle({Label="Swap When Empty",Config={"Ragebot","SwapWhenEmpty"}});end;local function I(W)local N={"Primary","Secondary","Melee"};for P,P in N,nil,nil do W:AddToggle({Label=string.format("%s Enabled",tostring(P)),Config={"Ragebot","Weapons","Enabled",P}});end;W:AddOrderedList({Label="Weapon Priority",Items=N,Default=N,Config={"Ragebot","Weapons","Priority"}});W:AddDropdown({Label="On Empty",Options={"Reload","Swap","SwapOrReload"},Labels={SwapOrReload="Swap or Reload"},Config={"Ragebot","Weapons","OnEmpty"}});end;local function W(N,P)local a=N:AddGroup({Source=P,Option="ProjectileBreaker"});a:AddRangeSlider({Label="Forward Depth",Min=0,Max=10,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthForward"}});a:AddSlider({Label="Forward Frequency",Min=0,Max=20,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthForwardFrequency"}});a:AddRangeSlider({Label="Upward Depth",Min=0,Max=10,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthUp"}});a:AddSlider({Label="Upward Frequency",Min=0,Max=20,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthUpFrequency"}});a:AddSlider({Label="Reposition Interval (s)",Min=0.05,Max=2,Step=0.01,Config={"Ragebot","Evasion","ProjectileBreaker","RepositionInterval"}});a:AddToggle({Label="Fallback Character Origin",Config={"Ragebot","Evasion","ProjectileBreaker","FallbackAnchorFromCharacter"}});a:AddSlider({Label="Fallback Radius",Min=5,Max=100000000,Config={"Ragebot","Evasion","ProjectileBreaker","FallbackBaseRadius"}});a:AddSlider({Label="Fallback Random Factor",Min=0,Max=1,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","FallbackRadiusRandomFactor"}});end;local function N(P)local a=P:AddDropdown({Label="Evasion Mode",Options={"Off","Random","Translocate","ProjectileBreaker"},Labels={ProjectileBreaker="Projectile Breaker"},Config={"Ragebot","Evasion","Mode"}});local e=P:AddGroup({Source=a,Option="Random"});e:AddToggle({Label="Character Origin",Config={"Ragebot","Evasion","Random","AnchorFromCharacter"}});e:AddSlider({Label="Base Radius",Min=5,Max=100000000,Config={"Ragebot","Evasion","Random","BaseRadius"}});e:AddSlider({Label="Random Factor",Min=0,Max=1,Step=0.1,Config={"Ragebot","Evasion","Random","RadiusRandomFactor"}});P:AddGroup({Source=a,Option="Translocate"}):AddSlider({Label="Offset",Min=-5,Max=5,Step=0.1,Config={"Ragebot","Evasion","Translocate","Offset"}});W(P,a);end;return function(W)l(W:AddSection({Title="Activation",Side="left"}));I(W:AddSection({Title="Weapon Strategy",Side="left"}));N(W:AddSection({Title="Evasion",Side="right"}));local SB=W:AddSection({Title="Sling Bypass",Side="right"});local h6=tbl17.h6();h6(SB,"Enable Sling Bypass",{"Always","Toggle","Hold"},{"Ragebot","SlingBypass"},true,"Sling Bypass");SB:AddDropdown({Label="Mode",Options={"Follow","Stalk","Hover","Rush","Stick","OrbitTarget","RandomAroundTarget","Visual"},Config={"Ragebot","SlingBypass","Mode"}});SB:AddDropdown({Label="Target Mode",Options={"Closest","Random","Weakest","Strongest"},Config={"Ragebot","SlingBypass","TargetMode"}});SB:AddToggle({Label="Hide Avatar",Config={"Ragebot","SlingBypass","HideAvatar"}});SB:AddToggle({Label="Auto Shoot",Config={"Ragebot","SlingBypass","AutoShoot"}});SB:AddSlider({Label="Follow Distance",Min=0,Max=30,Step=0.1,Config={"Ragebot","SlingBypass","FollowDistance"}});SB:AddSlider({Label="Follow Height",Min=-10,Max=20,Step=0.1,Config={"Ragebot","SlingBypass","FollowHeight"}});SB:AddSlider({Label="Attack Range",Min=1,Max=50,Step=0.5,Config={"Ragebot","SlingBypass","AttackRange"}});SB:AddSlider({Label="Orbit Radius",Min=1,Max=50,Step=0.5,Config={"Ragebot","SlingBypass","OrbitRadius"}});SB:AddSlider({Label="Orbit Speed",Min=10,Max=1000,Config={"Ragebot","SlingBypass","OrbitSpeed"}});local DB=W:AddSection({Title="Dagger Bypass",Side="right"});local h6d=tbl17.h6();h6d(DB,"Enable Dagger Bypass",{"Always","Toggle","Hold"},{"Ragebot","DaggerBypass"},true,"Dagger Bypass");local EH=W:AddSection({Title="Expand Hitbox",Side="left"});local h6e=tbl17.h6();h6e(EH,"Enable Expand Hitbox",{"Always","Toggle","Hold"},{"Ragebot","ExpandHitbox"},true,"Expand Hitbox");EH:AddSlider({Label="Hitbox Size",Min=1,Max=100,Step=0.5,Config={"Ragebot","ExpandHitbox","HitboxSize"}});EH:AddSlider({Label="Transparency",Min=0,Max=1,Step=0.05,Config={"Ragebot","ExpandHitbox","Transparency"}});EH:AddSlider({Label="Max Enemies",Min=1,Max=30,Config={"Ragebot","ExpandHitbox","MaxEnemies"}});EH:AddToggle({Label="Team Check",Config={"Ragebot","ExpandHitbox","TeamCheck"}});EH:AddToggle({Label="Safe Distance",Config={"Ragebot","ExpandHitbox","SafeDistance"}});EH:AddSlider({Label="Safe Dist",Min=1,Max=30,Step=0.5,Config={"Ragebot","ExpandHitbox","SafeDist"}});local AA=W:AddSection({Title="Anti Aim",Side="left"});local h6a=tbl17.h6();h6a(AA,"Enable Anti Aim",{"Always","Toggle","Hold"},{"Ragebot","AntiAim"},true,"Anti Aim");AA:AddDropdown({Label="Mode",Options={"Spin","Jitter","Static","Up","Down","Side","RandomSpin","Custom"},Config={"Ragebot","AntiAim","Mode"}});AA:AddSlider({Label="Speed (deg/s)",Min=100,Max=5000,Config={"Ragebot","AntiAim","Speed"}});AA:AddSlider({Label="Pitch Angle",Min=0,Max=90,Config={"Ragebot","AntiAim","PitchAngle"}});AA:AddSlider({Label="Yaw Angle",Min=0,Max=180,Config={"Ragebot","AntiAim","YawAngle"}});AA:AddToggle({Label="Jitter Pitch",Config={"Ragebot","AntiAim","JitterPitch"}});AA:AddToggle({Label="Jitter Yaw",Config={"Ragebot","AntiAim","JitterYaw"}});AA:AddSlider({Label="Static Yaw",Min=-180,Max=180,Config={"Ragebot","AntiAim","StaticYaw"}});AA:AddSlider({Label="Static Pitch",Min=-90,Max=90,Config={"Ragebot","AntiAim","StaticPitch"}});AA:AddSlider({Label="Custom Yaw",Min=-180,Max=180,Config={"Ragebot","AntiAim","CustomYaw"}});AA:AddSlider({Label="Custom Pitch",Min=-90,Max=90,Config={"Ragebot","AntiAim","CustomPitch"}});local TL=W:AddSection({Title="Translocation",Side="right"});local h6t=tbl17.h6();h6t(TL,"Enable Translocation",{"Always","Toggle","Hold"},{"Ragebot","Translocation"},true,"Translocation");TL:AddDropdown({Label="Offset Mode",Options={"Ahead","Behind","Up","Down","Random","Side"},Config={"Ragebot","Translocation","OffsetMode"}});TL:AddSlider({Label="Frequency",Min=1,Max=512,Config={"Ragebot","Translocation","Frequency"}});TL:AddSlider({Label="Offset Distance",Min=1,Max=500,Step=1,Config={"Ragebot","Translocation","OffsetDist"}});TL:AddSlider({Label="Offset Y",Min=-50,Max=50,Step=0.5,Config={"Ragebot","Translocation","OffsetY"}});TL:AddToggle({Label="Snap Back",Config={"Ragebot","Translocation","SnapBack"}});TL:AddToggle({Label="Jitter",Config={"Ragebot","Translocation","Jitter"}});TL:AddToggle({Label="Fake Velocity",Config={"Ragebot","Translocation","FakeVel"}});local FP=W:AddSection({Title="Fake Position",Side="right"});local h6f=tbl17.h6();h6f(FP,"Enable Fake Position",{"Always","Toggle","Hold"},{"Ragebot","FakePosition"},true,"Fake Position");FP:AddSlider({Label="Offset X",Min=-200,Max=200,Step=1,Config={"Ragebot","FakePosition","OffsetX"}});FP:AddSlider({Label="Offset Y",Min=-200,Max=200,Step=1,Config={"Ragebot","FakePosition","OffsetY"}});FP:AddSlider({Label="Offset Z",Min=-200,Max=200,Step=1,Config={"Ragebot","FakePosition","OffsetZ"}});FP:AddToggle({Label="Client on Surface",Tooltip="Tu ves la posicion real; el server ve el offset (debajo del mapa si Y negativo).",Config={"Ragebot","FakePosition","ClientSurface"}});local VS=W:AddSection({Title="Void Spam",Side="left"});local h6v=tbl17.h6();h6v(VS,"Enable Void Spam",{"Always","Toggle","Hold"},{"Ragebot","VoidSpam"},true,"Void Spam");VS:AddDropdown({Label="Mode",Options={"Random","Spiral","Wave","Chaos","Strobe"},Config={"Ragebot","VoidSpam","Mode"}});VS:AddSlider({Label="Attack Time (s)",Min=0.01,Max=1,Step=0.01,Config={"Ragebot","VoidSpam","AttackTime"}});VS:AddSlider({Label="Hide Time (s)",Min=0.01,Max=2,Step=0.01,Config={"Ragebot","VoidSpam","HideTime"}});VS:AddSlider({Label="Void Distance",Min=100,Max=50000,Config={"Ragebot","VoidSpam","VoidDistance"}});VS:AddToggle({Label="Auto Shoot",Config={"Ragebot","VoidSpam","AutoShoot"}});VS:AddToggle({Label="Restore Client View",Tooltip="Snap local view back after void offsets.",Config={"Ragebot","VoidSpam","RestoreClient"}});VS:AddToggle({Label="Zero Velocity on Attack",Config={"Ragebot","VoidSpam","ZeroVel"}});local TH=W:AddSection({Title="Target HUD",Side="right"});TH:AddToggle({Label="Enable Target HUD",Config={"Ragebot","TargetHUD","Enabled"}});TH:AddSlider({Label="Position X",Min=0,Max=100,Step=1,Config={"Ragebot","TargetHUD","PosX"}});TH:AddSlider({Label="Position Y",Min=0,Max=100,Step=1,Config={"Ragebot","TargetHUD","PosY"}});TH:AddSlider({Label="Scale",Min=0.5,Max=2,Step=0.05,Config={"Ragebot","TargetHUD","Scale"}});TH:AddSlider({Label="Item Scale",Min=0.5,Max=3,Step=0.05,Config={"Ragebot","TargetHUD","ItemScale"}});TH:AddToggle({Label="Target Highlight",Config={"Ragebot","TargetHUD","Highlight"}});TH:AddDropdown({Label="Highlight Type",Options={"AlwaysOnTop","Occluded"},Config={"Ragebot","TargetHUD","HighlightType"}});local AR=W:AddSection({Title="Arcade Mode",Side="right"});AR:AddToggle({Label="Auto Respawn",Tooltip="UE arcade_auto_respawn",Config={"Ragebot","Arcade","AutoRespawn"}});AR:AddSlider({Label="Respawn Delay (s)",Min=0,Max=5,Step=0.1,Config={"Ragebot","Arcade","RespawnDelay"}});AR:AddToggle({Label="Auto Ammo",Tooltip="UE arcade_auto_ammo",Config={"Ragebot","Arcade","AutoAmmo"}});AR:AddSlider({Label="Ammo Interval (s)",Min=0.05,Max=2,Step=0.05,Config={"Ragebot","Arcade","AmmoInterval"}});local CU=W:AddSection({Title="Counter UE",Side="left"});local h6c=tbl17.h6();h6c(CU,"Enable Counter UE",{"Always","Toggle","Hold"},{"Ragebot","CounterUE"},true,"Counter UE");CU:AddSlider({Label="Detect Threshold",Min=10,Max=200,Config={"Ragebot","CounterUE","DetectThreshold"}});CU:AddSlider({Label="Stick Height",Min=0,Max=20,Step=0.5,Config={"Ragebot","CounterUE","StickHeight"}});CU:AddSlider({Label="Max Distance",Min=50,Max=2000,Config={"Ragebot","CounterUE","MaxDistance"}});CU:AddToggle({Label="Auto Shoot",Config={"Ragebot","CounterUE","AutoShoot"}});CU:AddToggle({Label="Predict Position",Config={"Ragebot","CounterUE","Predict"}});CU:AddToggle({Label="Anti Damage",Tooltip="Bloquea el daño de players en rage UE.",Config={"Ragebot","CounterUE","AntiDamage"}});CU:AddToggle({Label="God Heal",Tooltip="Restaura HP si te bajan mientras counter esta on.",Config={"Ragebot","CounterUE","GodHeal"}});CU:AddSlider({Label="Shoot Attempts",Min=1,Max=40,Config={"Ragebot","CounterUE","ShootAttempts"}});end;end
 
 tbl17.ih = function()
 local ih = tbl17.cache.ih
@@ -67275,9 +67275,8 @@ do
     
 
     ----------------------------------------------------------------
-    -- Fake Position + Velocity Desync (full MeowwCL behavior)
-    -- Heartbeat: server-visible fake CFrame / velocity
-    -- PreRender + RenderStepped: restore real for local client view
+    -- Fake Position: simple X/Y offset (no loop movement)
+    -- Offset applies from your real position; server sees the offset
     ----------------------------------------------------------------
     local fakeHB, fakePre, fakeRS, fakeStepped
     local fakeRealCF, fakeRealVel
@@ -67295,7 +67294,6 @@ do
         if fakeStepped then fakeStepped:Disconnect() end
         fakeRealCF, fakeRealVel = nil, nil
 
-        -- try network ownership so our CFrame writes stick client-side
         pcall(function()
             local root = getRoot()
             if root then root:SetNetworkOwner(LocalPlayer) end
@@ -67306,55 +67304,35 @@ do
             local root = getRoot()
             if not root then return end
 
-            local range = tonumber(cfg({"Ragebot", "FakePosition", "RangeXZ"}, 150)) or 150
-            local minY = tonumber(cfg({"Ragebot", "FakePosition", "MinY"}, 10)) or 10
-            local maxY = tonumber(cfg({"Ragebot", "FakePosition", "MaxY"}, 100)) or 100
-            if maxY < minY then maxY = minY end
-            local desyncVel = cfg({"Ragebot", "FakePosition", "DesyncVelocity"}, false)
-            local velRange = tonumber(cfg({"Ragebot", "FakePosition", "VelRange"}, 5000)) or 5000
+            local offX = tonumber(cfg({"Ragebot", "FakePosition", "OffsetX"}, 0)) or 0
+            local offY = tonumber(cfg({"Ragebot", "FakePosition", "OffsetY"}, -5)) or -5
+            local offZ = tonumber(cfg({"Ragebot", "FakePosition", "OffsetZ"}, 0)) or 0
+            local clientSurface = cfg({"Ragebot", "FakePosition", "ClientSurface"}, true)
 
-            -- capture real state first (what client should see)
+            -- real position (where you actually are / move)
             fakeRealCF = root.CFrame
             fakeRealVel = root.AssemblyLinearVelocity
 
-            local ox = math.random(-range, range)
-            local oy = math.random(minY, maxY)
-            local oz = math.random(-range, range)
-
+            local offset = Vector3.new(offX, offY, offZ)
             pcall(function()
-                root.CFrame = fakeRealCF + Vector3.new(ox, oy, oz)
-                if desyncVel then
-                    root.AssemblyLinearVelocity = Vector3.new(
-                        math.random(-velRange, velRange),
-                        math.random(-velRange, velRange),
-                        math.random(-velRange, velRange)
-                    )
-                    root.AssemblyAngularVelocity = Vector3.new(
-                        math.random(-velRange, velRange),
-                        math.random(-velRange, velRange),
-                        math.random(-velRange, velRange)
-                    )
-                else
-                    root.AssemblyLinearVelocity = Vector3.zero
-                    root.AssemblyAngularVelocity = Vector3.zero
-                end
+                root.CFrame = fakeRealCF + offset
+                root.AssemblyLinearVelocity = Vector3.zero
+                root.AssemblyAngularVelocity = Vector3.zero
             end)
         end)
 
         local function restoreLocal()
             if not fpEnabled() then return end
+            if not cfg({"Ragebot", "FakePosition", "ClientSurface"}, true) then return end
             local root = getRoot()
             if not root or not fakeRealCF then return end
             pcall(function()
                 root.CFrame = fakeRealCF
-                if fakeRealVel then
-                    root.AssemblyLinearVelocity = fakeRealVel
-                end
+                if fakeRealVel then root.AssemblyLinearVelocity = fakeRealVel end
                 root.AssemblyAngularVelocity = Vector3.zero
             end)
         end
 
-        -- Meow uses RenderStepped; also PreRender so camera/physics see real pos
         fakePre = RunService.PreRender:Connect(restoreLocal)
         fakeRS = RunService.RenderStepped:Connect(restoreLocal)
         fakeStepped = RunService.Stepped:Connect(function()
@@ -67389,7 +67367,6 @@ do
         fakeWasOn = on
     end)
 
-    -- re-apply after respawn
     pcall(function()
         LocalPlayer.CharacterAdded:Connect(function()
             task.wait(0.3)
@@ -67431,13 +67408,26 @@ do
     local function getClosestEnemy()
         local root = getRoot()
         if not root then return nil end
-        local best, bestD = nil, math.huge
+        local best, bestScore = nil, -math.huge
+        local bestD = math.huge
+        local prioritizeLow = cfg({"Ragebot", "PrioritizeLowHP"}, true)
         for _, p in ipairs(Players:GetPlayers()) do
             if isEnemy(p) then
-                local hrp = p.Character:FindFirstChild("HumanoidRootPart")
-                if hrp then
+                local char = p.Character
+                local hrp = char and char:FindFirstChild("HumanoidRootPart")
+                local hum = char and char:FindFirstChildOfClass("Humanoid")
+                local head = char and (char:FindFirstChild("Head") or char:FindFirstChild("head"))
+                if hrp and hum then
                     local d = (root.Position - hrp.Position).Magnitude
-                    if d < bestD then
+                    -- score: closer + lower HP + has head = better
+                    local score = 10000 - d
+                    if prioritizeLow then
+                        score = score + (1 - (hum.Health / math.max(hum.MaxHealth, 1))) * 2500
+                    end
+                    if head then score = score + 200 end
+                    if hum.Health < 50 then score = score + 500 end
+                    if score > bestScore then
+                        bestScore = score
                         bestD = d
                         best = p
                     end
@@ -67486,29 +67476,121 @@ do
         return char:FindFirstChildOfClass("Tool") or best
     end
 
-    local function doShoot(times)
-        times = math.clamp(math.floor(tonumber(times) or 1), 1, 20)
+    -- PREMIUM HEADSHOT ENGINE
+    local function getHead(character)
+        if not character then return nil end
+        local h = character:FindFirstChild("Head") or character:FindFirstChild("head")
+        if h and h:IsA("BasePart") then return h end
+        return nil
+    end
+
+    local function headPosition(character)
+        local head = getHead(character)
+        if head then return head.Position, head end
+        local hrp = character and character:FindFirstChild("HumanoidRootPart")
+        if hrp then return hrp.Position + Vector3.new(0, 1.65, 0), nil end
+        return nil, nil
+    end
+
+    local function predictHead(character)
+        local headPos, head = headPosition(character)
+        if not headPos then return nil, nil end
+        local hrp = character:FindFirstChild("HumanoidRootPart")
+        local vel = hrp and hrp.AssemblyLinearVelocity or Vector3.zero
+        -- light prediction for moving targets
+        local lead = tonumber(cfg({"Ragebot", "HeadLead"}, 0.06)) or 0.06
+        return headPos + vel * lead, head
+    end
+
+    local function aimAtHead(targetChar)
+        if not targetChar then return nil, nil end
+        local headPos, headPart = predictHead(targetChar)
+        if not headPos then return nil, nil end
+        local cam = workspace.CurrentCamera
+        local root = getRoot()
+        pcall(function()
+            if cam then
+                cam.CFrame = CFrame.new(cam.CFrame.Position, headPos)
+            end
+            if root then
+                root.CFrame = CFrame.new(root.Position, headPos)
+            end
+        end)
+        return headPart, headPos
+    end
+
+    local function fireToolAtHead(tool, headPart, headPos, targetChar)
+        if not tool then return end
+        pcall(function() tool:Activate() end)
+        if not headPos then return end
+        pcall(function()
+            for _, d in ipairs(tool:GetDescendants()) do
+                if d:IsA("RemoteEvent") then
+                    local n = d.Name:lower()
+                    if n:find("fire") or n:find("shoot") or n:find("hit") or n:find("attack")
+                        or n:find("bullet") or n:find("ray") or n:find("pellet") or n:find("shot") then
+                        pcall(function() d:FireServer(headPos) end)
+                        pcall(function() d:FireServer(headPos, headPos) end)
+                        if headPart then
+                            pcall(function() d:FireServer(headPart) end)
+                            pcall(function() d:FireServer(headPart, headPos) end)
+                            pcall(function() d:FireServer("Head", headPos) end)
+                        end
+                        pcall(function() d:FireServer(targetChar, headPos) end)
+                    end
+                end
+            end
+        end)
+    end
+
+    local function doShoot(times, targetChar)
+        times = math.clamp(math.floor(tonumber(times) or 1), 1, 60)
         local tool = equipPreferredWeapon()
         for i = 1, times do
-            if tool then
-                pcall(function() tool:Activate() end)
-            end
-            -- also click as fallback for some weapons
+            local headPart, headPos = aimAtHead(targetChar)
+            fireToolAtHead(tool, headPart, headPos, targetChar)
             pcall(function()
-                if VirtualInputManager then
-                    VirtualInputManager:SendMouseButtonEvent(0, 0, 0, true, game, 0)
-                    VirtualInputManager:SendMouseButtonEvent(0, 0, 0, false, game, 0)
-                end
+                local vim = game:GetService("VirtualInputManager")
+                vim:SendMouseButtonEvent(0, 0, 0, true, game, 0)
+                vim:SendMouseButtonEvent(0, 0, 0, false, game, 0)
             end)
         end
     end
 
     local function faceAndMoveTo(root, targetHrp, height)
-        height = height or 3
+        height = height or -2
+        local char = targetHrp.Parent
+        local headPos = select(1, headPosition(char)) or (targetHrp.Position + Vector3.new(0, 1.65, 0))
         local pos = targetHrp.Position + Vector3.new(0, height, 0)
         pcall(function()
-            root.CFrame = CFrame.new(pos, targetHrp.Position)
+            root.CFrame = CFrame.new(pos, headPos)
+            root.AssemblyLinearVelocity = Vector3.zero
+            root.AssemblyAngularVelocity = Vector3.zero
         end)
+        aimAtHead(char)
+    end
+
+    local function tpUnderEnemy(root, targetHrp)
+        local under = tonumber(cfg({"Ragebot", "UnderOffset"}, -2)) or -2
+        if under > 0 then under = -under end
+        faceAndMoveTo(root, targetHrp, under)
+    end
+
+    -- TP to ideal headshot angle (slightly under + front of head)
+    local function tpHeadshotAngle(root, targetChar)
+        local headPos, head = headPosition(targetChar)
+        local hrp = targetChar:FindFirstChild("HumanoidRootPart")
+        if not headPos or not hrp or not root then return end
+        local under = tonumber(cfg({"Ragebot", "UnderOffset"}, -2)) or -2
+        if under > 0 then under = -under end
+        local behind = hrp.CFrame.LookVector * -1.5
+        local pos = headPos + Vector3.new(0, under, 0) + behind * 0.2
+        pcall(function()
+            root.CFrame = CFrame.new(pos, headPos)
+            root.AssemblyLinearVelocity = Vector3.zero
+            root.AssemblyAngularVelocity = Vector3.zero
+        end)
+        aimAtHead(targetChar)
     end
 
     ----------------------------------------------------------------
@@ -67604,7 +67686,11 @@ do
                 if target and target.Character then
                     local tHrp = target.Character:FindFirstChild("HumanoidRootPart")
                     if tHrp then
-                        faceAndMoveTo(root, tHrp, 3)
+                        if cfg({"Ragebot", "TPUnder"}, true) then
+                            tpHeadshotAngle(root, target.Character)
+                        else
+                            aimAtHead(target.Character)
+                        end
                         if zeroVel then
                             pcall(function()
                                 root.AssemblyLinearVelocity = Vector3.zero
@@ -67612,7 +67698,17 @@ do
                             end)
                         end
                         if autoShoot or rageOn() then
-                            doShoot(attempts)
+                            doShoot(math.max(attempts, 12), target.Character)
+                        end
+                        -- escape knife range right after attack tick
+                        if cfg({"Ragebot", "AntiKnife"}, true) then
+                            local escape = tonumber(cfg({"Ragebot", "EscapeDist"}, 120)) or 120
+                            pcall(function()
+                                local away = Vector3.new(math.random(-1,1), 0.5, math.random(-1,1))
+                                if away.Magnitude < 0.1 then away = Vector3.new(1, 0.5, 0) end
+                                root.CFrame = CFrame.new(tHrp.Position + away.Unit * escape + Vector3.new(0, 35, 0))
+                                root.AssemblyLinearVelocity = Vector3.zero
+                            end)
                         end
                     end
                 elseif rageOn() then
@@ -67669,8 +67765,9 @@ do
             if not rageOn() then return end
             if voidOn() then return end -- void spam owns the cycle
             acc = acc + dt
-            local stability = tonumber(cfg({"Ragebot", "Stability"}, 0.15)) or 0.15
-            if acc < math.max(0.02, stability * 0.2) then return end
+            -- much faster cycle than before
+            local stability = tonumber(cfg({"Ragebot", "Stability"}, 0.05)) or 0.05
+            if acc < math.max(0.01, stability * 0.1) then return end
             acc = 0
             local root = getRoot()
             if not root then return end
@@ -67679,30 +67776,32 @@ do
             local tHrp = target.Character:FindFirstChild("HumanoidRootPart")
             if not tHrp then return end
 
-            -- bait: slight random offset near target
-            local bait = cfg({"Ragebot", "Bait"}, false)
-            local height = 2.5
-            if bait then
-                height = height + (math.random() - 0.5) * 2
-                pcall(function()
-                    local side = tHrp.CFrame.RightVector * ((math.random() - 0.5) * 4)
-                    root.CFrame = CFrame.new(tHrp.Position + side + Vector3.new(0, height, 0), tHrp.Position)
-                end)
+            -- HEADSHOT ANGLE TP (under + look at head only)
+            if cfg({"Ragebot", "TPUnder"}, true) then
+                tpHeadshotAngle(root, target.Character)
             else
-                -- soft face (don't hard teleport every frame unless close)
+                aimAtHead(target.Character)
+            end
+
+            -- heavy headshot burst
+            local attempts = math.max(tonumber(cfg({"Ragebot", "ShootAttempts"}, 15)) or 15, 1)
+            local frames = math.clamp(math.floor(tonumber(cfg({"Ragebot", "ShootFrames"}, 4)) or 4), 1, 12)
+            for _ = 1, frames do
+                doShoot(attempts, target.Character)
+            end
+
+            -- escape so you don't eat knife/melee
+            if cfg({"Ragebot", "AntiKnife"}, true) then
+                local escape = tonumber(cfg({"Ragebot", "EscapeDist"}, 150)) or 150
                 pcall(function()
-                    local look = CFrame.new(root.Position, tHrp.Position)
-                    root.CFrame = root.CFrame:Lerp(look, 0.35)
+                    local ang = math.random() * math.pi * 2
+                    local away = Vector3.new(math.cos(ang) * escape, 45, math.sin(ang) * escape)
+                    root.CFrame = CFrame.new(tHrp.Position + away)
+                    root.AssemblyLinearVelocity = Vector3.zero
+                    root.AssemblyAngularVelocity = Vector3.zero
                 end)
             end
 
-            local attempts = tonumber(cfg({"Ragebot", "ShootAttempts"}, 1)) or 1
-            local frames = math.clamp(math.floor(tonumber(cfg({"Ragebot", "ShootFrames"}, 1)) or 1), 1, 5)
-            for _ = 1, frames do
-                doShoot(attempts)
-            end
-
-            -- swap when empty
             if cfg({"Ragebot", "SwapWhenEmpty"}, true) then
                 local tool = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Tool")
                 if tool then
@@ -67733,6 +67832,469 @@ do
         end)
     end)
 
+
+
+    ----------------------------------------------------------------
+    -- Full invulnerability while Ragebot god is on
+    -- Guns, knife, molotov, mine, subspace, explosives — multi-layer client defense
+    ----------------------------------------------------------------
+    do
+        local healthConn, diedConn, stateConn
+        local godHB, godStepped, godRS
+        local oldTakeDamage, hookedHum
+        local blockedNames = {
+            "damage", "kill", "hit", "hurt", "bleed", "burn",
+            "molotov", "mine", "subspace", "subespacial", "tripmine", "trip",
+            "explod", "grenade", "rocket", "bomb", "fire", "flame",
+            "projectile", "bullet", "shot", "slash", "stab", "melee",
+            "takedamage", "applydamage", "humanoid"
+        }
+
+        local function godActive()
+            if not rageOn() then return false end
+            return cfg({"Ragebot", "AntiLegit"}, true) == true
+                or cfg({"Ragebot", "GodMode"}, true) == true
+        end
+
+        local function nameLooksBad(n)
+            n = string.lower(tostring(n or ""))
+            for _, k in ipairs(blockedNames) do
+                if n:find(k, 1, true) then return true end
+            end
+            return false
+        end
+
+        local function forceAlive(hum, char)
+            if not hum then return end
+            pcall(function()
+                if hum.MaxHealth < 100 then hum.MaxHealth = 100 end
+                hum.Health = hum.MaxHealth
+                hum:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+                hum:SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
+                hum:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false)
+                hum:SetStateEnabled(Enum.HumanoidStateType.Physics, false)
+                if hum:GetState() == Enum.HumanoidStateType.Dead then
+                    hum:ChangeState(Enum.HumanoidStateType.Running)
+                end
+            end)
+            if char then
+                pcall(function()
+                    for _, p in ipairs(char:GetDescendants()) do
+                        if p:IsA("BasePart") then
+                            p.CanQuery = false
+                            p.CanTouch = false
+                            if p.Name ~= "HumanoidRootPart" then
+                                p.CanCollide = false
+                            end
+                        end
+                    end
+                    local ff = char:FindFirstChildOfClass("ForceField")
+                    if not ff then
+                        ff = Instance.new("ForceField")
+                        ff.Visible = false
+                        ff.Parent = char
+                    end
+                end)
+            end
+        end
+
+        local function escapeHazards()
+            -- blink away from nearby mines / fire / subspace-like parts
+            if not cfg({"Ragebot", "AntiExplosives"}, true) then return end
+            local root = getRoot()
+            if not root then return end
+            local char = LocalPlayer.Character
+            local danger = false
+            pcall(function()
+                for _, inst in ipairs(workspace:GetChildren()) do
+                    local n = string.lower(inst.Name)
+                    if nameLooksBad(n) or n:find("molotov") or n:find("mine") or n:find("subspace") or n:find("fire") then
+                        local p = inst:IsA("BasePart") and inst or inst:FindFirstChildWhichIsA("BasePart", true)
+                        if p and (p.Position - root.Position).Magnitude < 35 then
+                            danger = true
+                            break
+                        end
+                    end
+                end
+            end)
+            if danger then
+                pcall(function()
+                    local dist = tonumber(cfg({"Ragebot", "EscapeDist"}, 120)) or 120
+                    root.CFrame = root.CFrame + Vector3.new(
+                        math.random(-1, 1) * dist,
+                        50,
+                        math.random(-1, 1) * dist
+                    )
+                    root.AssemblyLinearVelocity = Vector3.zero
+                end)
+            end
+        end
+
+        local function hookHum(hum, char)
+            if not hum then return end
+            if healthConn then healthConn:Disconnect() end
+            if diedConn then diedConn:Disconnect() end
+            if stateConn then stateConn:Disconnect() end
+
+            pcall(function()
+                if hookfunction and hum.TakeDamage then
+                    pcall(function()
+                        if hookedHum == hum and oldTakeDamage then return end
+                        oldTakeDamage = hookfunction(hum.TakeDamage, function(self, ...)
+                            if godActive() then return end
+                            return oldTakeDamage(self, ...)
+                        end)
+                        hookedHum = hum
+                    end)
+                end
+            end)
+
+            forceAlive(hum, char)
+
+            healthConn = hum.HealthChanged:Connect(function()
+                if godActive() then forceAlive(hum, LocalPlayer.Character) end
+            end)
+            diedConn = hum.Died:Connect(function()
+                if not godActive() then return end
+                forceAlive(hum, LocalPlayer.Character)
+                task.defer(function()
+                    forceAlive(LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid"), LocalPlayer.Character)
+                end)
+            end)
+            stateConn = hum.StateChanged:Connect(function(_, new)
+                if not godActive() then return end
+                if new == Enum.HumanoidStateType.Dead
+                    or new == Enum.HumanoidStateType.Ragdoll
+                    or new == Enum.HumanoidStateType.FallingDown then
+                    forceAlive(hum, LocalPlayer.Character)
+                end
+            end)
+        end
+
+        local function applyChar(char)
+            if not char then return end
+            task.spawn(function()
+                local hum = char:WaitForChild("Humanoid", 5)
+                hookHum(hum, char)
+            end)
+        end
+
+        if LocalPlayer.Character then applyChar(LocalPlayer.Character) end
+        LocalPlayer.CharacterAdded:Connect(applyChar)
+
+        local function tickGod()
+            if not godActive() then return end
+            local char = LocalPlayer.Character
+            local hum = char and char:FindFirstChildOfClass("Humanoid")
+            if hum then forceAlive(hum, char) end
+            escapeHazards()
+        end
+
+        godHB = RunService.Heartbeat:Connect(tickGod)
+        godStepped = RunService.Stepped:Connect(tickGod)
+        godRS = RunService.RenderStepped:Connect(function()
+            if not godActive() then return end
+            local char = LocalPlayer.Character
+            local hum = char and char:FindFirstChildOfClass("Humanoid")
+            if hum and hum.Health < hum.MaxHealth then forceAlive(hum, char) end
+        end)
+
+        -- Block damage / explosive related remotes & TakeDamage namecalls
+        pcall(function()
+            if not hookmetamethod then return end
+            local old
+            old = hookmetamethod(game, "__namecall", function(self, ...)
+                if godActive() then
+                    local method = string.lower(tostring(getnamecallmethod and getnamecallmethod() or ""))
+                    if method == "takedamage" then return end
+                    if method == "fireserver" or method == "invokeserver" then
+                        local n = tostring(self and self.Name or "")
+                        if nameLooksBad(n) then
+                            local args = {...}
+                            local me = LocalPlayer.Name:lower()
+                            for _, a in ipairs(args) do
+                                if a == LocalPlayer then return end
+                                if a == LocalPlayer.Character then return end
+                                if type(a) == "string" and a:lower() == me then return end
+                                if typeof(a) == "Instance" and LocalPlayer.Character and a:IsDescendantOf(LocalPlayer.Character) then return end
+                            end
+                        end
+                    end
+                end
+                return old(self, ...)
+            end)
+        end)
+
+        -- Also block NewIndex health kills
+        pcall(function()
+            if not hookmetamethod then return end
+            local old
+            old = hookmetamethod(game, "__newindex", function(self, key, value)
+                if godActive() and typeof(self) == "Instance" and self:IsA("Humanoid") and self.Parent == LocalPlayer.Character then
+                    if key == "Health" and type(value) == "number" and value < self.MaxHealth then
+                        return old(self, key, self.MaxHealth)
+                    end
+                end
+                return old(self, key, value)
+            end)
+        end)
+
+        if K and K.onUnload then
+            K.onUnload(function()
+                if healthConn then healthConn:Disconnect() end
+                if diedConn then diedConn:Disconnect() end
+                if stateConn then stateConn:Disconnect() end
+                if godHB then godHB:Disconnect() end
+                if godStepped then godStepped:Disconnect() end
+                if godRS then godRS:Disconnect() end
+            end)
+        end
+    end
+
+    ----------------------------------------------------------------
+    -- Target HUD (UE-style target_ui) — Ragebot apartado
+    -- Layout similar to Unnamed: avatar | name + hp bar + distance
+    ----------------------------------------------------------------
+    local hudGui, hudRoot, hudAvatar, hudAvatarImg, hudName, hudSub, hudBarBg, hudBar, hudDist
+    local highlightInst
+    local currentHudTarget
+    local Players = game:GetService("Players")
+    local LocalPlayer = Players.LocalPlayer
+
+    local function destroyTargetHUD()
+        if hudGui then pcall(function() hudGui:Destroy() end) end
+        hudGui, hudRoot, hudAvatar, hudAvatarImg, hudName, hudSub, hudBarBg, hudBar, hudDist = nil, nil, nil, nil, nil, nil, nil, nil, nil
+        if highlightInst then pcall(function() highlightInst:Destroy() end) highlightInst = nil end
+        currentHudTarget = nil
+    end
+
+    local function ensureTargetHUD()
+        if hudGui and hudGui.Parent then return true end
+        local pg = LocalPlayer:FindFirstChild("PlayerGui") or LocalPlayer:WaitForChild("PlayerGui", 3)
+        if not pg then return false end
+
+        hudGui = Instance.new("ScreenGui")
+        hudGui.Name = "KyvweerTargetHUD"
+        hudGui.ResetOnSpawn = false
+        hudGui.IgnoreGuiInset = true
+        hudGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+        hudGui.DisplayOrder = 100
+        hudGui.Parent = pg
+
+        -- main card
+        hudRoot = Instance.new("Frame")
+        hudRoot.Name = "TargetCard"
+        hudRoot.AnchorPoint = Vector2.new(0.5, 0.5)
+        hudRoot.Size = UDim2.fromOffset(260, 64)
+        hudRoot.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
+        hudRoot.BackgroundTransparency = 0.12
+        hudRoot.BorderSizePixel = 0
+        hudRoot.Parent = hudGui
+        local c1 = Instance.new("UICorner")
+        c1.CornerRadius = UDim.new(0, 6)
+        c1.Parent = hudRoot
+        local st = Instance.new("UIStroke")
+        st.Name = "Stroke"
+        st.Color = Color3.fromRGB(90, 180, 255)
+        st.Thickness = 1
+        st.Transparency = 0.45
+        st.Parent = hudRoot
+
+        -- left accent bar (UE-like)
+        local accent = Instance.new("Frame")
+        accent.Name = "Accent"
+        accent.Size = UDim2.new(0, 3, 1, 0)
+        accent.BackgroundColor3 = Color3.fromRGB(100, 200, 255)
+        accent.BorderSizePixel = 0
+        accent.Parent = hudRoot
+
+        -- avatar circle
+        hudAvatar = Instance.new("Frame")
+        hudAvatar.Name = "Avatar"
+        hudAvatar.Size = UDim2.fromOffset(44, 44)
+        hudAvatar.Position = UDim2.fromOffset(12, 10)
+        hudAvatar.BackgroundColor3 = Color3.fromRGB(30, 32, 38)
+        hudAvatar.BorderSizePixel = 0
+        hudAvatar.Parent = hudRoot
+        local ac = Instance.new("UICorner")
+        ac.CornerRadius = UDim.new(1, 0)
+        ac.Parent = hudAvatar
+        hudAvatarImg = Instance.new("ImageLabel")
+        hudAvatarImg.BackgroundTransparency = 1
+        hudAvatarImg.Size = UDim2.fromScale(1, 1)
+        hudAvatarImg.Image = ""
+        hudAvatarImg.Parent = hudAvatar
+        local aic = Instance.new("UICorner")
+        aic.CornerRadius = UDim.new(1, 0)
+        aic.Parent = hudAvatarImg
+
+        -- name
+        hudName = Instance.new("TextLabel")
+        hudName.BackgroundTransparency = 1
+        hudName.Position = UDim2.fromOffset(66, 8)
+        hudName.Size = UDim2.new(1, -120, 0, 18)
+        hudName.Font = Enum.Font.GothamBold
+        hudName.TextSize = 14
+        hudName.TextColor3 = Color3.fromRGB(235, 240, 255)
+        hudName.TextXAlignment = Enum.TextXAlignment.Left
+        hudName.TextTruncate = Enum.TextTruncate.AtEnd
+        hudName.Text = "No Target"
+        hudName.Parent = hudRoot
+
+        -- subtitle (HP text)
+        hudSub = Instance.new("TextLabel")
+        hudSub.BackgroundTransparency = 1
+        hudSub.Position = UDim2.fromOffset(66, 26)
+        hudSub.Size = UDim2.new(1, -120, 0, 14)
+        hudSub.Font = Enum.Font.Gotham
+        hudSub.TextSize = 12
+        hudSub.TextColor3 = Color3.fromRGB(160, 170, 190)
+        hudSub.TextXAlignment = Enum.TextXAlignment.Left
+        hudSub.Text = "—"
+        hudSub.Parent = hudRoot
+
+        -- distance (right)
+        hudDist = Instance.new("TextLabel")
+        hudDist.BackgroundTransparency = 1
+        hudDist.AnchorPoint = Vector2.new(1, 0)
+        hudDist.Position = UDim2.new(1, -10, 0, 8)
+        hudDist.Size = UDim2.fromOffset(50, 18)
+        hudDist.Font = Enum.Font.GothamMedium
+        hudDist.TextSize = 12
+        hudDist.TextColor3 = Color3.fromRGB(140, 190, 255)
+        hudDist.TextXAlignment = Enum.TextXAlignment.Right
+        hudDist.Text = "—"
+        hudDist.Parent = hudRoot
+
+        -- health bar
+        hudBarBg = Instance.new("Frame")
+        hudBarBg.Name = "HPBG"
+        hudBarBg.Position = UDim2.fromOffset(66, 46)
+        hudBarBg.Size = UDim2.new(1, -78, 0, 6)
+        hudBarBg.BackgroundColor3 = Color3.fromRGB(35, 38, 46)
+        hudBarBg.BorderSizePixel = 0
+        hudBarBg.Parent = hudRoot
+        local bc = Instance.new("UICorner")
+        bc.CornerRadius = UDim.new(1, 0)
+        bc.Parent = hudBarBg
+        hudBar = Instance.new("Frame")
+        hudBar.Name = "HP"
+        hudBar.Size = UDim2.fromScale(1, 1)
+        hudBar.BackgroundColor3 = Color3.fromRGB(90, 220, 140)
+        hudBar.BorderSizePixel = 0
+        hudBar.Parent = hudBarBg
+        local bc2 = Instance.new("UICorner")
+        bc2.CornerRadius = UDim.new(1, 0)
+        bc2.Parent = hudBar
+
+        return true
+    end
+
+    local avatarCache = {}
+    local function loadAvatar(userId)
+        if avatarCache[userId] then return avatarCache[userId] end
+        local url = ""
+        pcall(function()
+            url = Players:GetUserThumbnailAsync(userId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size48x48)
+        end)
+        avatarCache[userId] = url
+        return url
+    end
+
+    local function setHighlight(target)
+        local want = cfg({"Ragebot", "TargetHUD", "Highlight"}, false)
+        if not want or not target or not target.Character then
+            if highlightInst then pcall(function() highlightInst:Destroy() end) highlightInst = nil end
+            return
+        end
+        if not highlightInst or highlightInst.Parent ~= target.Character then
+            if highlightInst then pcall(function() highlightInst:Destroy() end) end
+            highlightInst = Instance.new("Highlight")
+            highlightInst.Name = "KyvweerTargetHighlight"
+            highlightInst.FillColor = Color3.fromRGB(100, 200, 255)
+            highlightInst.OutlineColor = Color3.fromRGB(255, 255, 255)
+            highlightInst.FillTransparency = 0.7
+            highlightInst.OutlineTransparency = 0.15
+            local htype = tostring(cfg({"Ragebot", "TargetHUD", "HighlightType"}, "AlwaysOnTop") or "AlwaysOnTop")
+            highlightInst.DepthMode = (htype == "Occluded") and Enum.HighlightDepthMode.Occluded or Enum.HighlightDepthMode.AlwaysOnTop
+            highlightInst.Parent = target.Character
+        end
+    end
+
+    local function updateTargetHUD()
+        local enabled = cfg({"Ragebot", "TargetHUD", "Enabled"}, true)
+        -- show when enabled; especially relevant with ragebot
+        if not enabled then
+            if hudGui then hudGui.Enabled = false end
+            if highlightInst then pcall(function() highlightInst:Destroy() end) highlightInst = nil end
+            return
+        end
+        if not ensureTargetHUD() then return end
+        hudGui.Enabled = true
+
+        local px = tonumber(cfg({"Ragebot", "TargetHUD", "PosX"}, 50)) or 50
+        local py = tonumber(cfg({"Ragebot", "TargetHUD", "PosY"}, 70)) or 70
+        local scale = tonumber(cfg({"Ragebot", "TargetHUD", "Scale"}, 1)) or 1
+        local itemScale = tonumber(cfg({"Ragebot", "TargetHUD", "ItemScale"}, 1.7)) or 1.7
+        local w = 260 * (itemScale / 1.7) * scale
+        local h = 64 * (itemScale / 1.7) * scale
+        hudRoot.Size = UDim2.fromOffset(w, h)
+        hudRoot.Position = UDim2.new(px / 100, 0, py / 100, 0)
+
+        local target = select(1, getClosestEnemy())
+        currentHudTarget = target
+
+        if not target or not target.Character then
+            hudName.Text = "No Target"
+            hudSub.Text = "—"
+            hudDist.Text = "—"
+            hudBar.Size = UDim2.fromScale(0, 1)
+            hudAvatarImg.Image = ""
+            setHighlight(nil)
+            return
+        end
+
+        local hum = target.Character:FindFirstChildOfClass("Humanoid")
+        local hrp = target.Character:FindFirstChild("HumanoidRootPart")
+        local hp = hum and hum.Health or 0
+        local maxHp = (hum and hum.MaxHealth > 0) and hum.MaxHealth or 100
+        local ratio = math.clamp(hp / maxHp, 0, 1)
+        local dist = 0
+        local root = getRoot()
+        if root and hrp then dist = (root.Position - hrp.Position).Magnitude end
+
+        hudName.Text = target.DisplayName or target.Name
+        hudSub.Text = string.format("%d / %d HP", math.floor(hp + 0.5), math.floor(maxHp + 0.5))
+        hudDist.Text = string.format("%dm", math.floor(dist + 0.5))
+        hudBar.Size = UDim2.fromScale(ratio, 1)
+        if ratio > 0.55 then
+            hudBar.BackgroundColor3 = Color3.fromRGB(90, 220, 140)
+        elseif ratio > 0.25 then
+            hudBar.BackgroundColor3 = Color3.fromRGB(230, 190, 70)
+        else
+            hudBar.BackgroundColor3 = Color3.fromRGB(230, 75, 75)
+        end
+
+        -- avatar
+        local uid = target.UserId
+        if uid then
+            task.spawn(function()
+                local url = loadAvatar(uid)
+                if hudAvatarImg and currentHudTarget == target then
+                    hudAvatarImg.Image = url or ""
+                end
+            end)
+        end
+        setHighlight(target)
+    end
+
+    task.spawn(function()
+        while true do
+            pcall(updateTargetHUD)
+            task.wait(0.05)
+        end
+    end)
+
     K.onUnload(function()
         stopSling()
         stopExpand()
@@ -67741,7 +68303,10 @@ do
         stopFakePos()
         stopVoidSpam()
         stopUERage()
+        destroyTargetHUD()
     end)
+
+
 
 
 
@@ -68156,5 +68721,473 @@ do
     end)
 end
 
+
+
+
+
+
+--==========================================================================
+--  Counter UE — insta-kill ANY rage user (UE, voidspam, TP rage, desync, etc.)
+--==========================================================================
+do
+    local Players = game:GetService("Players")
+    local RunService = game:GetService("RunService")
+    local LocalPlayer = Players.LocalPlayer
+
+    local function cuGet(key, default)
+        local g = (getgenv and getgenv()) or _G
+        local store = g.Kyvweer_ReactiveStore
+        if store and store.Data and store.Data.Ragebot and store.Data.Ragebot.CounterUE then
+            local v = store.Data.Ragebot.CounterUE[key]
+            if v ~= nil then return v end
+        end
+        if K and K.Config and K.Config.store then
+            local ok, v = pcall(function()
+                return K.Config.store:Get({"Ragebot", "CounterUE", key}, true)
+            end)
+            if ok and v ~= nil then return v end
+        end
+        return default
+    end
+
+    local function cuOn()
+        local g = (getgenv and getgenv()) or _G
+        local store = g.Kyvweer_ReactiveStore
+        if store and store.Data and store.Data.Ragebot and store.Data.Ragebot.CounterUE then
+            local d = store.Data.Ragebot.CounterUE
+            if d.Enabled == true then
+                local kb = d.Keybind
+                if not kb then return true end
+                local kind = kb.Kind or "Toggle"
+                if kind == "Always" then return true end
+                return kb.State == true
+            end
+            return false
+        end
+        return cuGet("Enabled", false) == true
+    end
+
+    local function getRoot()
+        local c = LocalPlayer.Character
+        return c and c:FindFirstChild("HumanoidRootPart")
+    end
+
+    local function getHum()
+        local c = LocalPlayer.Character
+        return c and c:FindFirstChildOfClass("Humanoid")
+    end
+
+    local function getHead(char)
+        if not char then return nil end
+        return char:FindFirstChild("Head") or char:FindFirstChild("HumanoidRootPart")
+    end
+
+    local track = {}
+    local ragerSet = {}
+
+    local function isEnemy(p)
+        if not p or p == LocalPlayer then return false end
+        if not p.Character then return false end
+        local hum = p.Character:FindFirstChildOfClass("Humanoid")
+        if not hum or hum.Health <= 0 then return false end
+        if LocalPlayer.Team and p.Team and LocalPlayer.Team == p.Team then return false end
+        return true
+    end
+
+    -- Detect ANY rage: big TP, insane speed, under-map, rapid flicker, zero-ping jumps
+    local function updateTracks()
+        local now = tick()
+        local threshold = tonumber(cuGet("DetectThreshold", 12)) or 12
+        for _, p in ipairs(Players:GetPlayers()) do
+            if isEnemy(p) then
+                local hrp = p.Character:FindFirstChild("HumanoidRootPart")
+                if hrp then
+                    local t = track[p]
+                    local pos = hrp.Position
+                    local vel = hrp.AssemblyLinearVelocity
+                    if not t then
+                        track[p] = {
+                            lastPos = pos,
+                            lastStable = pos,
+                            lastT = now,
+                            rageScore = 0,
+                            lastVel = vel,
+                            hits = 0,
+                            tpCount = 0,
+                        }
+                    else
+                        local delta = (pos - t.lastPos).Magnitude
+                        local dt = math.max(0.001, now - t.lastT)
+                        local speed = delta / dt
+                        local velMag = vel.Magnitude
+
+                        local isRage = false
+                        -- classic void / TP rage
+                        if delta > threshold then isRage = true end
+                        if speed > threshold * 3 then isRage = true end
+                        if velMag > 400 then isRage = true end
+                        -- under map / sky desync
+                        if pos.Y < -10 or pos.Y > 400 then isRage = true end
+                        -- flicker: big move then back
+                        if delta > 8 and (pos - (t.lastStable or pos)).Magnitude > threshold then isRage = true end
+                        -- sudden stop from insane speed (void hide)
+                        if t.lastVel.Magnitude > 300 and velMag < 30 and delta > 15 then isRage = true end
+
+                        if isRage then
+                            t.rageScore = math.min(50, t.rageScore + 4)
+                            t.hits = (t.hits or 0) + 1
+                            t.tpCount = (t.tpCount or 0) + 1
+                        else
+                            t.rageScore = math.max(0, t.rageScore - 0.15)
+                            t.lastStable = pos
+                            t.lastVel = vel
+                            if t.rageScore < 1 then t.hits = 0; t.tpCount = 0 end
+                        end
+                        t.lastPos = pos
+                        t.lastT = now
+                        -- any rage score marks them
+                        ragerSet[p] = t.rageScore >= 1
+                    end
+                end
+            else
+                track[p] = nil
+                ragerSet[p] = nil
+            end
+        end
+        for p in pairs(track) do
+            if not p.Parent then track[p] = nil; ragerSet[p] = nil end
+        end
+    end
+
+    local function pickRageTargets()
+        local root = getRoot()
+        if not root then return {} end
+        local maxDist = tonumber(cuGet("MaxDistance", 5000)) or 5000
+        local list = {}
+        for p, t in pairs(track) do
+            if isEnemy(p) and t.rageScore >= 1 then
+                local aim = t.lastStable or t.lastPos
+                local d = (root.Position - aim).Magnitude
+                if d <= maxDist then
+                    table.insert(list, { player = p, data = t, dist = d })
+                end
+            end
+        end
+        table.sort(list, function(a, b)
+            if a.data.rageScore ~= b.data.rageScore then
+                return a.data.rageScore > b.data.rageScore
+            end
+            return a.dist < b.dist
+        end)
+        return list
+    end
+
+    local function getBestTool()
+        local char = LocalPlayer.Character
+        if not char then return nil end
+        local tool = char:FindFirstChildOfClass("Tool")
+        if tool then return tool end
+        local bp = LocalPlayer:FindFirstChild("Backpack")
+        if bp then
+            for _, t in ipairs(bp:GetChildren()) do
+                if t:IsA("Tool") then
+                    pcall(function() t.Parent = char end)
+                    return t
+                end
+            end
+        end
+        return nil
+    end
+
+    local function instaKillRager(p, t)
+        local char = p.Character
+        if not char then return end
+        local hrp = char:FindFirstChild("HumanoidRootPart")
+        local head = getHead(char)
+        local root = getRoot()
+        if not hrp or not root then return end
+
+        local aimPos = t.lastStable or hrp.Position
+        -- if body is visible close to stable, use live
+        if (hrp.Position - aimPos).Magnitude < 50 then
+            aimPos = hrp.Position
+        end
+        if head then aimPos = head.Position end
+
+        local height = tonumber(cuGet("StickHeight", 1)) or 1
+        -- sit on them / under head and dump shots
+        pcall(function()
+            root.CFrame = CFrame.new(aimPos + Vector3.new(0, height, 0), aimPos)
+            root.AssemblyLinearVelocity = Vector3.zero
+            root.AssemblyAngularVelocity = Vector3.zero
+        end)
+
+        -- aim camera at head
+        pcall(function()
+            local cam = workspace.CurrentCamera
+            if cam and head then
+                cam.CFrame = CFrame.new(cam.CFrame.Position, head.Position)
+            end
+        end)
+
+        local n = math.clamp(math.floor(tonumber(cuGet("ShootAttempts", 20)) or 20), 1, 50)
+        local tool = getBestTool()
+        for _ = 1, n do
+            if tool then pcall(function() tool:Activate() end) end
+            if tool and head then
+                pcall(function()
+                    for _, d in ipairs(tool:GetDescendants()) do
+                        if d:IsA("RemoteEvent") then
+                            local nm = d.Name:lower()
+                            if nm:find("fire") or nm:find("shoot") or nm:find("hit") or nm:find("attack") or nm:find("bullet") then
+                                pcall(function() d:FireServer(head.Position) end)
+                                pcall(function() d:FireServer(head) end)
+                                pcall(function() d:FireServer(char) end)
+                            end
+                        end
+                    end
+                end)
+            end
+            pcall(function()
+                local vim = game:GetService("VirtualInputManager")
+                vim:SendMouseButtonEvent(0, 0, 0, true, game, 0)
+                vim:SendMouseButtonEvent(0, 0, 0, false, game, 0)
+            end)
+        end
+    end
+
+    ----------------------------------------------------------------
+    -- Self protect while countering
+    ----------------------------------------------------------------
+    local healthConn
+    local function protectSelf()
+        if not cuOn() then return end
+        if not cuGet("AntiDamage", true) and not cuGet("GodHeal", true) then return end
+        local hum = getHum()
+        if not hum then return end
+        pcall(function()
+            hum.Health = hum.MaxHealth
+            hum:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+        end)
+        local char = LocalPlayer.Character
+        if char and not char:FindFirstChildOfClass("ForceField") then
+            pcall(function()
+                local ff = Instance.new("ForceField")
+                ff.Visible = false
+                ff.Parent = char
+            end)
+        end
+    end
+
+    if LocalPlayer.Character then
+        local h = LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+        if h then
+            healthConn = h.HealthChanged:Connect(function()
+                if cuOn() then protectSelf() end
+            end)
+        end
+    end
+    LocalPlayer.CharacterAdded:Connect(function(char)
+        task.wait(0.15)
+        local h = char:WaitForChild("Humanoid", 5)
+        if healthConn then healthConn:Disconnect() end
+        if h then
+            healthConn = h.HealthChanged:Connect(function()
+                if cuOn() then protectSelf() end
+            end)
+        end
+    end)
+
+    ----------------------------------------------------------------
+    -- Main: any rager gets insta deleted
+    ----------------------------------------------------------------
+    local cuConn
+    local function startCounter()
+        if cuConn then return end
+        cuConn = RunService.Heartbeat:Connect(function()
+            if not cuOn() then return end
+            updateTracks()
+            protectSelf()
+
+            local targets = pickRageTargets()
+            if #targets == 0 then return end
+
+            -- kill top ragers (up to 3 per frame)
+            local maxK = math.min(#targets, 3)
+            for i = 1, maxK do
+                local entry = targets[i]
+                if cuGet("AutoShoot", true) then
+                    instaKillRager(entry.player, entry.data)
+                end
+            end
+        end)
+    end
+
+    local function stopCounter()
+        if cuConn then cuConn:Disconnect(); cuConn = nil end
+    end
+
+    local wasOn = false
+    RunService.Heartbeat:Connect(function()
+        local on = cuOn()
+        if on and not wasOn then startCounter() end
+        if not on and wasOn then stopCounter() end
+        wasOn = on
+        if on then protectSelf() end
+    end)
+
+    if K and K.onUnload then
+        K.onUnload(function()
+            stopCounter()
+            if healthConn then healthConn:Disconnect() end
+        end)
+    end
+end
+
+
+--  Arcade Mode (UE) — Ragebot apartado (like Fake Position)
+--==========================================================================
+do
+    local Players = game:GetService("Players")
+    local LocalPlayer = Players.LocalPlayer
+
+    local function arcadeGet(key, default)
+        local g = (getgenv and getgenv()) or _G
+        local store = g.Kyvweer_ReactiveStore
+        if store and store.Data and store.Data.Ragebot and store.Data.Ragebot.Arcade then
+            local v = store.Data.Ragebot.Arcade[key]
+            if v ~= nil then return v end
+        end
+        if K and K.Config and K.Config.store then
+            local ok, v = pcall(function()
+                return K.Config.store:Get({"Ragebot", "Arcade", key}, true)
+            end)
+            if ok and v ~= nil then return v end
+        end
+        return default
+    end
+
+    -- Auto Respawn
+    local respawnBusy = false
+    local function tryRespawn()
+        if respawnBusy then return end
+        if not arcadeGet("AutoRespawn", false) then return end
+        respawnBusy = true
+        local delay = tonumber(arcadeGet("RespawnDelay", 0.5)) or 0.5
+        task.delay(math.max(0, delay), function()
+            respawnBusy = false
+            if not arcadeGet("AutoRespawn", false) then return end
+            local char = LocalPlayer.Character
+            local hum = char and char:FindFirstChildOfClass("Humanoid")
+            if hum and hum.Health > 0 then return end
+            pcall(function() LocalPlayer:LoadCharacter() end)
+            pcall(function()
+                local rs = game:GetService("ReplicatedStorage")
+                for _, name in ipairs({"Respawn", "RequestRespawn", "RespawnCharacter", "LoadCharacter"}) do
+                    local r = rs:FindFirstChild(name, true)
+                    if r and r:IsA("RemoteEvent") then pcall(function() r:FireServer() end)
+                    elseif r and r:IsA("RemoteFunction") then pcall(function() r:InvokeServer() end) end
+                end
+            end)
+            pcall(function()
+                local pg = LocalPlayer:FindFirstChild("PlayerGui")
+                if not pg then return end
+                for _, gui in ipairs(pg:GetDescendants()) do
+                    if gui:IsA("TextButton") or gui:IsA("ImageButton") then
+                        local t = ((gui.Text or "") .. " " .. gui.Name):lower()
+                        if t:find("respawn") or t:find("play again") or t:find("redeploy") then
+                            pcall(function() firesignal(gui.MouseButton1Click) end)
+                        end
+                    end
+                end
+            end)
+        end)
+    end
+
+    local function hookHumanoid(hum)
+        if not hum then return end
+        hum.Died:Connect(tryRespawn)
+        hum.HealthChanged:Connect(function(h)
+            if h <= 0 then tryRespawn() end
+        end)
+    end
+    if LocalPlayer.Character then
+        hookHumanoid(LocalPlayer.Character:FindFirstChildOfClass("Humanoid"))
+    end
+    LocalPlayer.CharacterAdded:Connect(function(char)
+        respawnBusy = false
+        hookHumanoid(char:WaitForChild("Humanoid", 5))
+    end)
+    task.spawn(function()
+        while true do
+            task.wait(0.4)
+            if arcadeGet("AutoRespawn", false) then
+                local char = LocalPlayer.Character
+                local hum = char and char:FindFirstChildOfClass("Humanoid")
+                if not char or not hum or hum.Health <= 0 then tryRespawn() end
+            end
+        end
+    end)
+
+    -- Auto Ammo
+    local function refillAmmo()
+        if not arcadeGet("AutoAmmo", false) then return end
+        local char = LocalPlayer.Character
+        if not char then return end
+        local function patchTool(tool)
+            if not tool or not tool:IsA("Tool") then return end
+            for _, v in ipairs(tool:GetDescendants()) do
+                if v:IsA("NumberValue") or v:IsA("IntValue") then
+                    local n = v.Name:lower()
+                    if n:find("ammo") or n:find("clip") or n:find("magazine") or n:find("rounds") then
+                        local maxV = nil
+                        for _, m in ipairs(tool:GetDescendants()) do
+                            if (m:IsA("NumberValue") or m:IsA("IntValue")) then
+                                local mn = m.Name:lower()
+                                if mn:find("max") and (mn:find("ammo") or mn:find("clip") or mn:find("mag")) then
+                                    maxV = m.Value
+                                    break
+                                end
+                            end
+                        end
+                        pcall(function() v.Value = maxV or math.max(v.Value, 30) end)
+                    end
+                end
+            end
+            pcall(function()
+                for _, attr in ipairs({"Ammo", "ammo", "Clip", "Magazine", "CurrentAmmo"}) do
+                    local val = tool:GetAttribute(attr)
+                    if type(val) == "number" then
+                        tool:SetAttribute(attr, tool:GetAttribute("MaxAmmo") or tool:GetAttribute("MaxClip") or 30)
+                    end
+                end
+            end)
+        end
+        for _, t in ipairs(char:GetChildren()) do
+            if t:IsA("Tool") then patchTool(t) end
+        end
+        local bp = LocalPlayer:FindFirstChild("Backpack")
+        if bp then
+            for _, t in ipairs(bp:GetChildren()) do
+                if t:IsA("Tool") then patchTool(t) end
+            end
+        end
+        pcall(function()
+            local rs = game:GetService("ReplicatedStorage")
+            for _, name in ipairs({"Reload", "RequestReload", "RefillAmmo", "GiveAmmo"}) do
+                local r = rs:FindFirstChild(name, true)
+                if r and r:IsA("RemoteEvent") then pcall(function() r:FireServer() end) end
+            end
+        end)
+    end
+
+    task.spawn(function()
+        while true do
+            local interval = tonumber(arcadeGet("AmmoInterval", 0.25)) or 0.25
+            task.wait(math.max(0.05, interval))
+            pcall(refillAmmo)
+        end
+    end)
+end
 
 tbl17.j1()(boot)
