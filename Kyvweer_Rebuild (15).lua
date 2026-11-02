@@ -1963,7 +1963,7 @@ return y.c
 end
 end
 do -- z
-local function fn35()return{Accent=Color3.fromRGB(100,200,255),Outline=Color3.fromRGB(20,40,60),Background=Color3.fromRGB(0,0,0),ElementBackground=Color3.fromRGB(8,12,18),TabButtonSelected=Color3.fromRGB(15,25,40),Unselected=Color3.fromRGB(80,100,120),TextColor=Color3.fromRGB(220,235,255),ToggleCircleUnselected=Color3.fromRGB(50,70,90),ToggleBackgroundUnselected=Color3.fromRGB(10,15,22),GradientTop=Color3.fromRGB(12,18,28),GradientMid=Color3.fromRGB(6,10,16),GradientDark=Color3.fromRGB(3,5,8),GradientDeep=Color3.fromRGB(0,0,0),TabHighlight=Color3.fromRGB(40,80,120),TabShadow=Color3.fromRGB(10,15,25)};end
+local function fn35()return{Accent=Color3.fromRGB(100,200,255),Outline=Color3.fromRGB(12,18,28),Background=Color3.fromRGB(0,0,0),ElementBackground=Color3.fromRGB(4,5,8),TabButtonSelected=Color3.fromRGB(10,14,22),Unselected=Color3.fromRGB(70,90,110),TextColor=Color3.fromRGB(220,235,255),ToggleCircleUnselected=Color3.fromRGB(40,55,75),ToggleBackgroundUnselected=Color3.fromRGB(6,8,12),GradientTop=Color3.fromRGB(6,8,12),GradientMid=Color3.fromRGB(3,4,6),GradientDark=Color3.fromRGB(2,2,4),GradientDeep=Color3.fromRGB(0,0,0),TabHighlight=Color3.fromRGB(30,60,90),TabShadow=Color3.fromRGB(5,6,10)};end
 
 tbl17.z = function()
 local z = tbl17.cache.z
@@ -12910,6 +12910,8 @@ canvasGroup.BackgroundTransparency = 1
 canvasGroup.Position = fn40()
 canvasGroup.BorderSizePixel = v86[186]
 canvasGroup.AutomaticSize = Enum.AutomaticSize.XY
+canvasGroup.Active = true
+canvasGroup.Selectable = true
 canvasGroup.Parent = parent
 arg3:Add(canvasGroup)
 arg:MakeDraggable(canvasGroup, arg3, { PersistKey = "KeybindsListPosition" })
@@ -12921,26 +12923,40 @@ uiScale.Parent = canvasGroup
 end
 
 local canvasGroup2 = Instance.new("CanvasGroup")
-canvasGroup2.BackgroundTransparency = 0.02
-canvasGroup2.BackgroundColor3 = Color3.fromRGB(8, 8, 12)
+canvasGroup2.BackgroundTransparency = 0
+canvasGroup2.BackgroundColor3 = Color3.fromRGB(2, 2, 4)
 canvasGroup2.BorderSizePixel = v86[186]
 canvasGroup2.Size = UDim2.fromOffset(234, 0)
 canvasGroup2.AutomaticSize = Enum.AutomaticSize.Y
 canvasGroup2.GroupTransparency = v86[63]
 canvasGroup2.Visible = false
+canvasGroup2.Active = true
+-- Keep list dark: bind then force near-black so theme cannot lighten it
 arg2:Bind(canvasGroup2, "BackgroundColor3", "GradientDark")
 pcall(function()
-    canvasGroup2.BackgroundColor3 = Color3.fromRGB(6, 6, 10)
-    canvasGroup2.BackgroundTransparency = 0.02
+    canvasGroup2.BackgroundColor3 = Color3.fromRGB(2, 2, 4)
+    canvasGroup2.BackgroundTransparency = 0
+end)
+-- re-apply dark every theme refresh
+pcall(function()
+    arg2:BindStateful("GradientDark", function()
+        canvasGroup2.BackgroundColor3 = Color3.fromRGB(2, 2, 4)
+        canvasGroup2.BackgroundTransparency = 0
+    end)
 end)
 canvasGroup2.Parent = canvasGroup
 local uiCorner = Instance.new("UICorner")
 uiCorner.CornerRadius = UDim.new(0, 6)
 uiCorner.Parent = canvasGroup2
 local uiStroke = Instance.new("UIStroke")
-uiStroke.Transparency = v86[87]
+uiStroke.Transparency = 0.55
 uiStroke.Thickness = 1
+uiStroke.Color = Color3.fromRGB(18, 22, 30)
 arg2:Bind(uiStroke, v86[27], "Outline")
+pcall(function()
+    uiStroke.Color = Color3.fromRGB(18, 22, 30)
+    uiStroke.Transparency = 0.55
+end)
 uiStroke.Parent = canvasGroup2
 local frame = Instance.new("Frame")
 frame.BorderSizePixel = 0
@@ -19844,7 +19860,7 @@ return bd.c
 end
 end
 do -- be
-local function fn35()local I= tbl17 .i().atomic; tbl17 .aZ();local W,N,P= tbl17 .aU(), tbl17 .aW(), tbl17 .aY();return{Aimbot=W.buildConfig(),SilentAim=N.buildConfig(),Triggerbot=P.buildConfig(),Ragebot={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="Gun",ShootAttempts=6,Bait=false,StayUnderMap=false,UnderMapDepth=6,UnderMapWalk=false,BriefTPShot=false,TPUnder=false,UnderOffset=-2,Headshot=true,MultiTarget=true,AntiLegit=false,GodMode=false,EvadeOnDamage=false,AntiKnife=false,AntiExplosives=false,EscapeDist=180,PrioritizeHackers=false,Stability=0.1,ShootFrames=2,Weapons={Priority=I({"Primary","Secondary","Melee"}),Enabled={Primary=true,Secondary=true,Melee=true},OnEmpty="SwapOrReload"},Evasion={Mode="Random",Random={AnchorFromCharacter=false,BaseRadius=100,RadiusRandomFactor=0.5},ProjectileBreaker={DepthForward={Min=0,Max=4},DepthForwardFrequency=5,DepthUp={Min=0,Max=5.5},DepthUpFrequency=5,RepositionInterval=0.3,FallbackAnchorFromCharacter=false,FallbackBaseRadius=100,FallbackRadiusRandomFactor=0.5},Translocate={Offset=-5}},UtilizeHealthLead=false,SlingBypass={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="Follow",TargetMode="Closest",HideAvatar=true,AutoShoot=true,StickHeight=2,AttackRange=8,ShotCooldown=0.05,FollowDistance=2,FollowHeight=2,FollowLerp=0.5,FollowPredict=true,FollowLead=0.15,StalkDistance=6,StalkHeight=3,StalkBehind=true,HoverHeight=8,OrbitRadius=5,OrbitSpeed=200,OrbitHeight=0,RandomRadius=8,UseTargetVel=true},DaggerBypass={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},ExpandHitbox={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},HitboxSize=45,Transparency=0.7,MaxEnemies=12,TeamCheck=true,SafeDistance=false,SafeDist=5,PatchRaycast=true},AntiAim={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="RandomSpin",Speed=5000,PitchAngle=45,YawAngle=45,JitterPitch=true,JitterYaw=true,StaticYaw=90,StaticPitch=0,CustomYaw=180,CustomPitch=0},Translocation={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Frequency=256,OffsetDist=100,OffsetMode="Ahead",OffsetY=0,SnapBack=true,Jitter=false,FakeVel=true},FakePosition={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},OffsetX=0,OffsetY=-6,OffsetZ=0,ClientSurface=true},VoidSpam={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="Random",AttackTime=0.02,HideTime=0.05,VoidDistance=6000,AutoShoot=true,RestoreClient=true,ZeroVel=true},TargetHUD={Enabled=true,PosX=50,PosY=8,Scale=1,ItemScale=1.7,Highlight=false,HighlightFill={1,1,1},HighlightOutline={1,1,1},HighlightType="AlwaysOnTop"},Arcade={AutoRespawn=false,AutoAmmo=false,RespawnDelay=0.5,AmmoInterval=0.25},CounterUE={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},DetectThreshold=8,StickHeight=1,AutoShoot=true,Predict=true,MaxDistance=5000,AntiDamage=true,GodHeal=true,ShootAttempts=40},CounterSleepy={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},DetectDepth=3,StickHeight=1,MaxDistance=5000,AutoShoot=true,Headshot=true,AntiDamage=true,ShootAttempts=40},CounterNewminy={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},TriangleSize=40,SwitchRate=0.04,VoidAltitude=5000,TeamCheck=true,MaxDistance=5000,AutoShoot=true,StickHeight=2,ShootAttempts=25},CounterKicia={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},SwitchRate=0.08,VoidDistance=80000,UndergroundDepth=3.5,Pitch=90,MaxDistance=5000,AutoShoot=true,AntiDamage=true,ShootAttempts=25},CounterTranslocate={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},LSize=35,SwitchRate=0.05,Height=22,TeamCheck=true,DesyncCFrame=true,MaxDistance=5000,AutoShoot=true,ShootAttempts=25},Weapon="Primary",PreferProjectile=true,SwapWhenEmpty=true,PriorityVoided=true,PriorityAttackers=true},Flickbot={Enabled=false,Keybind={State=false,Kind="Hold",Bind=nil,ShowInList=true,Invisible=false},Shoot=false,ShotDelay=0,Cooldown=250,FlickDuration=110,Curvature=12,Humanness=30}};end
+local function fn35()local I= tbl17 .i().atomic; tbl17 .aZ();local W,N,P= tbl17 .aU(), tbl17 .aW(), tbl17 .aY();return{Aimbot=W.buildConfig(),SilentAim=N.buildConfig(),Triggerbot=P.buildConfig(),Ragebot={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="Gun",ShootAttempts=12,Bait=false,StayUnderMap=false,UnderMapDepth=6,UnderMapWalk=false,BriefTPShot=true,TPUnder=true,UnderOffset=-2,Headshot=true,MultiTarget=true,AntiLegit=false,GodMode=false,EvadeOnDamage=false,AntiKnife=false,AntiExplosives=false,EscapeDist=180,PrioritizeHackers=false,Stability=0.05,ShootFrames=2,Weapons={Priority=I({"Primary","Secondary","Melee"}),Enabled={Primary=true,Secondary=true,Melee=true},OnEmpty="SwapOrReload"},Evasion={Mode="Random",Random={AnchorFromCharacter=false,BaseRadius=100,RadiusRandomFactor=0.5},ProjectileBreaker={DepthForward={Min=0,Max=4},DepthForwardFrequency=5,DepthUp={Min=0,Max=5.5},DepthUpFrequency=5,RepositionInterval=0.3,FallbackAnchorFromCharacter=false,FallbackBaseRadius=100,FallbackRadiusRandomFactor=0.5},Translocate={Offset=-5}},UtilizeHealthLead=false,SlingBypass={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="Follow",TargetMode="Closest",HideAvatar=true,AutoShoot=true,StickHeight=2,AttackRange=8,ShotCooldown=0.01,FollowDistance=2,FollowHeight=2,FollowLerp=0.5,FollowPredict=true,FollowLead=0.15,StalkDistance=6,StalkHeight=3,StalkBehind=true,HoverHeight=8,OrbitRadius=5,OrbitSpeed=200,OrbitHeight=0,RandomRadius=8,UseTargetVel=true},DaggerBypass={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},ExpandHitbox={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},HitboxSize=45,Transparency=0.7,MaxEnemies=12,TeamCheck=true,SafeDistance=false,SafeDist=5,PatchRaycast=true},AntiAim={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="RandomSpin",Speed=5000,PitchAngle=45,YawAngle=45,JitterPitch=true,JitterYaw=true,StaticYaw=90,StaticPitch=0,CustomYaw=180,CustomPitch=0},Translocation={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Frequency=256,OffsetDist=100,OffsetMode="Ahead",OffsetY=0,SnapBack=true,Jitter=false,FakeVel=true},FakePosition={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},OffsetX=0,OffsetY=-6,OffsetZ=0,Pitch=90,PanicX=false,PanicMin=-12,PanicMax=12,ClientSurface=true},VoidSpam={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Mode="Random",AttackTime=0.02,HideTime=0.05,VoidDistance=6000,AutoShoot=true,RestoreClient=true,ZeroVel=true},TargetHUD={Enabled=true,PosX=50,PosY=8,Scale=1,ItemScale=1.7,Highlight=false,HighlightFill={1,1,1},HighlightOutline={1,1,1},HighlightType="AlwaysOnTop"},Arcade={AutoRespawn=false,AutoAmmo=false,RespawnDelay=0.5,AmmoInterval=0.25},CounterUE={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},DetectThreshold=8,StickHeight=1,AutoShoot=true,Predict=true,MaxDistance=5000,AntiDamage=true,GodHeal=true,ShootAttempts=40},CounterSleepy={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},DetectDepth=3,StickHeight=1,MaxDistance=5000,AutoShoot=true,Headshot=true,AntiDamage=true,ShootAttempts=40},CounterNewminy={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},TriangleSize=40,SwitchRate=0.04,VoidAltitude=5000,TeamCheck=true,MaxDistance=5000,AutoShoot=true,StickHeight=2,ShootAttempts=25},CounterKicia={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},SwitchRate=0.08,VoidDistance=80000,UndergroundDepth=3.5,Pitch=90,MaxDistance=5000,AutoShoot=true,AntiDamage=true,ShootAttempts=25},CounterTranslocate={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},LSize=35,SwitchRate=0.05,Height=22,TeamCheck=true,DesyncCFrame=true,MaxDistance=5000,AutoShoot=true,ShootAttempts=25},Weapon="Primary",PreferProjectile=true,SwapWhenEmpty=true,PriorityVoided=true,PriorityAttackers=true},Flickbot={Enabled=false,Keybind={State=false,Kind="Hold",Bind=nil,ShowInList=true,Invisible=false},Shoot=false,ShotDelay=0,Cooldown=250,FlickDuration=110,Curvature=12,Humanness=30}};end
 
 tbl17.be = function()
 local be = tbl17.cache.be
@@ -19902,7 +19918,7 @@ return bh.c
 end
 end
 do -- bi
-local function fn35() tbl17 .a3();return{Movement={WalkSpeed={Enabled=false,Speed=2,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},JumpPower={Enabled=false,Speed=2,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=false,Invisible=false}},Flight={Enabled=false,Speed=100,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},Sliding={Enabled=false,Speed=10,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},Noclip={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},AutoStrafe={Enabled=false,Speed=50,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},LongJump={Enabled=false,Keybind={State=false,Kind="Tap",Bind=nil,ShowInList=true,Invisible=false},Mode="Under Feet",Force=60,UpwardVelocity=20,Behind=8},MovementRecorder={Enabled=false,HideUI=false,HideNotifications=false,OpenDistance=3,RenderDistance=50,LookAlignSpeed=180,AlignSnapDistance=0.2,LookSmoothing=35,Record={Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false}},Replay={Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false}}}},Removables={NoFlashbang=false,NoBurnEffect=false,NoAdsVignette=false,NoScopeOverlay=false,NoScopeReticle=false,NoGunTracers=false,NoMuzzleFlash=false,NoHitmarker=false},ThirdPerson={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},ShowReplica=false,RayCheck=false,X=3,Y=2,Z=6},CameraFov={Enabled=false,Value=70},StretchedResolution={Enabled=false,X=13,Y=10},CustomCrosshair={Enabled=false,Style="Lines",Image={Name="",Size=32,Transparency=0},Length=12,Thickness=2,Gap=6,Outline={Enabled=false,Color=Color3.fromRGB(0,0,0),Thickness=1},Animation={Enabled=false,Kind="Shimmer",Speed=1,Shimmer={Color=Color3.fromRGB(40,40,40)},Perimeter={Color=ColorSequence.new(Color3.fromRGB(255,0,0),Color3.fromRGB(0,0,255))},PingPong={BackgroundColor=Color3.fromRGB(0,0,0),MainColor=Color3.fromRGB(255,255,255),Rotation=0}},Rotation={Enabled=false,Angle=0,Speed=90},Spread={Enabled=false,Range={Min=4,Max=16},Speed=3},Top={Enabled=true,Color=ColorSequence.new(Color3.fromRGB(255,255,255))},Bottom={Enabled=true,Color=ColorSequence.new(Color3.fromRGB(255,255,255))},Left={Enabled=true,Color=ColorSequence.new(Color3.fromRGB(255,255,255))},Right={Enabled=true,Color=ColorSequence.new(Color3.fromRGB(255,255,255))},Text={Enabled=false,Content="",Font="Inconsolata",Size=14,Offset=24,Color=ColorSequence.new(Color3.fromRGB(255,255,255)),Outline={Enabled=false,Color=Color3.fromRGB(0,0,0),Thickness=1},Animation={Enabled=false,Kind="Shimmer",Speed=1,Shimmer={Color=Color3.fromRGB(40,40,40)},Perimeter={Color=ColorSequence.new(Color3.fromRGB(255,0,0),Color3.fromRGB(0,0,255))},PingPong={BackgroundColor=Color3.fromRGB(0,0,0),MainColor=Color3.fromRGB(255,255,255),Rotation=0}}},FollowTarget={Enabled=false,Mode="Crosshair",Speed=20,Damper=1,SnapDistance=5}},AnimationPlayer={Enabled=false,Animation="Cat Girl Bounce",CustomId="",Speed=1,Start=0,End=100},DeviceSpoof={Enabled=false,SpoofType="VR"},PlayerSpoofer={LocalPlayer={Name={Enabled=false,Value="Nosniy"},DisplayName={Enabled=false,Value="Nosniy"},Avatar={Enabled=false,Value="20349956"},Ping={Enabled=false,Value="Low"},Keys={Enabled=false,Value=999},EventCurrency={Enabled=false,Value=9999},Winstreak={Enabled=false,Value=999},Level={Enabled=false,Value=999},CasualWins={Enabled=false,Value=99999},RankedWins={Enabled=false,Value=9999},CasualWinPercent={Enabled=false,Value=100},RankedWinPercent={Enabled=false,Value=100},RankedElo={Enabled=false,Value=3600},LeaderboardRank={Enabled=false,Value=1},FavoriteMap={Enabled=false,Value="Arena"},NametagStatus={Enabled=false,Value="Prime"},Influencer={Enabled=false,Value=true},RobloxEmployee={Enabled=false,Value=true},NosniyTeam={Enabled=false}},OtherPlayers={Name={Enabled=false,Value=""},DisplayName={Enabled=false,Value=""},Avatar={Enabled=false,Value=""},Winstreak={Enabled=false,Value=0},Level={Enabled=false,Value=0},CasualWins={Enabled=false,Value=0},RankedWins={Enabled=false,Value=0},CasualWinPercent={Enabled=false,Value=0},RankedWinPercent={Enabled=false,Value=0},RankedElo={Enabled=false,Value=0},LeaderboardRank={Enabled=false,Value=200},FavoriteMap={Enabled=false,Value=""},NametagStatus={Enabled=false,Value="Prime"},Influencer={Enabled=false},RobloxEmployee={Enabled=false},NosniyTeam={Enabled=false}}}};end
+local function fn35() tbl17 .a3();return{Movement={WalkSpeed={Enabled=false,Speed=2,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},JumpPower={Enabled=false,Speed=2,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=false,Invisible=false}},Flight={Enabled=false,Speed=100,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},Sliding={Enabled=false,Speed=10,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},Noclip={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},AutoStrafe={Enabled=false,Speed=50,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false}},LongJump={Enabled=false,Keybind={State=false,Kind="Tap",Bind=nil,ShowInList=true,Invisible=false},Mode="Under Feet",Force=60,UpwardVelocity=20,Behind=8},MovementRecorder={Enabled=false,HideUI=false,HideNotifications=false,OpenDistance=3,RenderDistance=50,LookAlignSpeed=180,AlignSnapDistance=0.2,LookSmoothing=35,Record={Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false}},Replay={Keybind={State=false,Kind="Toggle",Bind=nil,ShowInList=true,Invisible=false}}}},Removables={NoFlashbang=false,NoBurnEffect=false,NoAdsVignette=false,NoScopeOverlay=false,NoScopeReticle=false,NoGunTracers=false,NoMuzzleFlash=false,NoHitmarker=false},ThirdPerson={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},ShowReplica=false,RayCheck=false,X=3,Y=2,Z=6},CameraFov={Enabled=false,Value=70},StretchedResolution={Enabled=false,X=13,Y=10},CustomCrosshair={Enabled=false,Style="Lines",Image={Name="",Size=32,Transparency=0},Length=12,Thickness=2,Gap=6,Outline={Enabled=false,Color=Color3.fromRGB(0,0,0),Thickness=1},Animation={Enabled=false,Kind="Shimmer",Speed=1,Shimmer={Color=Color3.fromRGB(40,40,40)},Perimeter={Color=ColorSequence.new(Color3.fromRGB(255,0,0),Color3.fromRGB(0,0,255))},PingPong={BackgroundColor=Color3.fromRGB(0,0,0),MainColor=Color3.fromRGB(255,255,255),Rotation=0}},Rotation={Enabled=false,Angle=0,Speed=90},Spread={Enabled=false,Range={Min=4,Max=16},Speed=3},Top={Enabled=true,Color=ColorSequence.new(Color3.fromRGB(255,255,255))},Bottom={Enabled=true,Color=ColorSequence.new(Color3.fromRGB(255,255,255))},Left={Enabled=true,Color=ColorSequence.new(Color3.fromRGB(255,255,255))},Right={Enabled=true,Color=ColorSequence.new(Color3.fromRGB(255,255,255))},Text={Enabled=false,Content="",Font="Inconsolata",Size=14,Offset=24,Color=ColorSequence.new(Color3.fromRGB(255,255,255)),Outline={Enabled=false,Color=Color3.fromRGB(0,0,0),Thickness=1},Animation={Enabled=false,Kind="Shimmer",Speed=1,Shimmer={Color=Color3.fromRGB(40,40,40)},Perimeter={Color=ColorSequence.new(Color3.fromRGB(255,0,0),Color3.fromRGB(0,0,255))},PingPong={BackgroundColor=Color3.fromRGB(0,0,0),MainColor=Color3.fromRGB(255,255,255),Rotation=0}}},FollowTarget={Enabled=false,Mode="Crosshair",Speed=20,Damper=1,SnapDistance=5}},AnimationPlayer={Enabled=false,Animation="Cat Girl Bounce",CustomId="",Speed=1,Start=0,End=100},DeviceSpoof={Enabled=false,SpoofType="VR"},PlayerSpoofer={LocalPlayer={Name={Enabled=false,Value="Nosniy"},DisplayName={Enabled=false,Value="Nosniy"},Avatar={Enabled=false,Value="20349956"},Ping={Enabled=false,Value="Low"},Keys={Enabled=false,Value=999},EventCurrency={Enabled=false,Value=9999},Winstreak={Enabled=false,Value=999},Level={Enabled=false,Value=999},CasualWins={Enabled=false,Value=99999},RankedWins={Enabled=false,Value=9999},CasualWinPercent={Enabled=false,Value=100},RankedWinPercent={Enabled=false,Value=100},RankedElo={Enabled=false,Value=3600},LeaderboardRank={Enabled=false,Value=1},FavoriteMap={Enabled=false,Value="Arena"},NametagStatus={Enabled=false,Value="Prime"},Influencer={Enabled=false,Value=true},RobloxEmployee={Enabled=false,Value=true},NosniyTeam={Enabled=false},Fps={Enabled=false,Value=240}},OtherPlayers={Name={Enabled=false,Value=""},DisplayName={Enabled=false,Value=""},Avatar={Enabled=false,Value=""},Winstreak={Enabled=false,Value=0},Level={Enabled=false,Value=0},CasualWins={Enabled=false,Value=0},RankedWins={Enabled=false,Value=0},CasualWinPercent={Enabled=false,Value=0},RankedWinPercent={Enabled=false,Value=0},RankedElo={Enabled=false,Value=0},LeaderboardRank={Enabled=false,Value=200},FavoriteMap={Enabled=false,Value=""},NametagStatus={Enabled=false,Value="Prime"},Influencer={Enabled=false},RobloxEmployee={Enabled=false},NosniyTeam={Enabled=false}}}};end
 
 tbl17.bi = function()
 local bi = tbl17.cache.bi
@@ -23723,10 +23739,18 @@ local v115 = tbl17.bG()
 return function(arg)
 local playerSpoofer = v115.Data.PlayerSpoofer
 arg = arg and playerSpoofer.LocalPlayer.Avatar or playerSpoofer.OtherPlayers.Avatar
-if not arg.Enabled then
+if not arg or not arg.Enabled then
 return nil
 end
-return tonumber(arg.Value)
+local v = arg.Value
+if type(v) == "number" then
+return (v > 0) and math.floor(v) or nil
+end
+if type(v) == "string" then
+local n = tonumber((v:gsub("%D", "")))
+if n and n > 0 then return n end
+end
+return tonumber(v)
 end
 end
 
@@ -60161,7 +60185,7 @@ return iu.c
 end
 end
 do -- iv
-local function fn35()local I= tbl17 .bG(); tbl17 .aE();local W= tbl17 .a6();local function l(N,P)local a=I:Get(P);if type(a)=="number"then N:Set(tostring(a),true);end;N:OnChanged(function(a)local e=tonumber(a);if e~=nil and e~=I:Get(P)then I:Set(P,e);end;end);N:Connect(I:GetPropertyChangedSignal(P),function(I)if type(I)=="number"then N:Set(tostring(I),true);end;end);end;local function addOne(a,c,p)local E,T=a:AddToggle({Label=p.Label,Config=W(c,{p.Field,"Enabled"})}),p.Value;if T.Kind=="toggle"then return;end;local e,t=W(c,{p.Field,"Value"}),a:AddGroup({Source=E});if T.Kind=="percent"then t:AddSlider({Label=T.Placeholder,Min=0,Max=100,Step=0.1,Config=e});elseif T.Kind=="number"then l(t:AddTextBox({Label=T.Placeholder}),e);elseif T.Kind=="text"then t:AddTextBox({Label=T.Placeholder,Config=e});elseif T.Kind=="dropdown"then t:AddDropdown({Label=T.Placeholder,Options=T.Options,Config=e});end;end;local function addList(a,c,list)for _,p in next,list do addOne(a,c,p);end;end;local NameF={{Field="Name",Label="Name",Value={Kind="text",Placeholder="Value"}},{Field="DisplayName",Label="Display Name",Value={Kind="text",Placeholder="Value"}},{Field="Avatar",Label="Avatar",Value={Kind="text",Placeholder="User ID"}}};local StatsF={{Field="Winstreak",Label="Winstreak",Value={Kind="number",Placeholder="Value"}},{Field="Level",Label="Level",Value={Kind="number",Placeholder="Value"}},{Field="CasualWins",Label="Casual Wins",Value={Kind="number",Placeholder="Value"}},{Field="RankedWins",Label="Ranked Wins",Value={Kind="number",Placeholder="Value"}},{Field="CasualWinPercent",Label="Casual Win %",Value={Kind="percent",Placeholder="Win %"}},{Field="RankedWinPercent",Label="Ranked Win %",Value={Kind="percent",Placeholder="Win %"}}};local RankF={{Field="RankedElo",Label="Ranked ELO",Value={Kind="number",Placeholder="Value"}},{Field="LeaderboardRank",Label="Leaderboard Rank",Value={Kind="number",Placeholder="Value"}},{Field="FavoriteMap",Label="Favorite Map",Value={Kind="text",Placeholder="Favorite Map"}}};local BadgeF={{Field="NametagStatus",Label="Nametag Status",Value={Kind="dropdown",Placeholder="Status",Options={"Prime","Contraband"}}},{Field="Influencer",Label="Influencer",Value={Kind="toggle"}},{Field="RobloxEmployee",Label="Roblox Employee",Value={Kind="toggle"}},{Field="NosniyTeam",Label="Nosniy Games Team",Value={Kind="toggle"}}};local MiscF={{Field="Ping",Label="Ping",Value={Kind="dropdown",Placeholder="Ping Value",Options={"Low","Medium","High"}}},{Field="Keys",Label="Keys",Value={Kind="number",Placeholder="Value"}},{Field="EventCurrency",Label="Event Currency",Value={Kind="number",Placeholder="Value"}}};return function(page)local n1=page:AddSection({Title="Name Spoof Local",Side="left"});addList(n1,{"PlayerSpoofer","LocalPlayer"},NameF);local n2=page:AddSection({Title="Name Spoof Others",Side="right"});addList(n2,{"PlayerSpoofer","OtherPlayers"},NameF);local s1=page:AddSection({Title="Stats Spoof Local",Side="left"});addList(s1,{"PlayerSpoofer","LocalPlayer"},StatsF);local s2=page:AddSection({Title="Stats Spoof Others",Side="right"});addList(s2,{"PlayerSpoofer","OtherPlayers"},StatsF);local r1=page:AddSection({Title="Rank Spoof Local",Side="left"});addList(r1,{"PlayerSpoofer","LocalPlayer"},RankF);local r2=page:AddSection({Title="Rank Spoof Others",Side="right"});addList(r2,{"PlayerSpoofer","OtherPlayers"},RankF);local b1=page:AddSection({Title="Badge Status Local",Side="left"});addList(b1,{"PlayerSpoofer","LocalPlayer"},BadgeF);local b2=page:AddSection({Title="Badge Status Others",Side="right"});addList(b2,{"PlayerSpoofer","OtherPlayers"},BadgeF);local m1=page:AddSection({Title="Misc Spoof Local",Side="left"});addList(m1,{"PlayerSpoofer","LocalPlayer"},MiscF);end;end
+local function fn35()local I= tbl17 .bG(); tbl17 .aE();local W= tbl17 .a6();local function l(N,P)local a=I:Get(P);if type(a)=="number"then N:Set(tostring(a),true);end;N:OnChanged(function(a)local e=tonumber(a);if e~=nil and e~=I:Get(P)then I:Set(P,e);end;end);N:Connect(I:GetPropertyChangedSignal(P),function(I)if type(I)=="number"then N:Set(tostring(I),true);end;end);end;local function addOne(a,c,p)local E,T=a:AddToggle({Label=p.Label,Config=W(c,{p.Field,"Enabled"})}),p.Value;if T.Kind=="toggle"then return;end;local e,t=W(c,{p.Field,"Value"}),a:AddGroup({Source=E});if T.Kind=="percent"then t:AddSlider({Label=T.Placeholder,Min=0,Max=100,Step=0.1,Config=e});elseif T.Kind=="number"then l(t:AddTextBox({Label=T.Placeholder}),e);elseif T.Kind=="text"then t:AddTextBox({Label=T.Placeholder,Config=e});elseif T.Kind=="dropdown"then t:AddDropdown({Label=T.Placeholder,Options=T.Options,Config=e});end;end;local function addList(a,c,list)for _,p in next,list do addOne(a,c,p);end;end;local NameF={{Field="Name",Label="Name",Value={Kind="text",Placeholder="Value"}},{Field="DisplayName",Label="Display Name",Value={Kind="text",Placeholder="Value"}},{Field="Avatar",Label="Avatar",Value={Kind="text",Placeholder="User ID"}}};local StatsF={{Field="Winstreak",Label="Winstreak",Value={Kind="number",Placeholder="Value"}},{Field="Level",Label="Level",Value={Kind="number",Placeholder="Value"}},{Field="CasualWins",Label="Casual Wins",Value={Kind="number",Placeholder="Value"}},{Field="RankedWins",Label="Ranked Wins",Value={Kind="number",Placeholder="Value"}},{Field="CasualWinPercent",Label="Casual Win %",Value={Kind="percent",Placeholder="Win %"}},{Field="RankedWinPercent",Label="Ranked Win %",Value={Kind="percent",Placeholder="Win %"}}};local RankF={{Field="RankedElo",Label="Ranked ELO",Value={Kind="number",Placeholder="Value"}},{Field="LeaderboardRank",Label="Leaderboard Rank",Value={Kind="number",Placeholder="Value"}},{Field="FavoriteMap",Label="Favorite Map",Value={Kind="text",Placeholder="Favorite Map"}}};local BadgeF={{Field="NametagStatus",Label="Nametag Status",Value={Kind="dropdown",Placeholder="Status",Options={"Prime","Contraband"}}},{Field="Influencer",Label="Influencer",Value={Kind="toggle"}},{Field="RobloxEmployee",Label="Roblox Employee",Value={Kind="toggle"}},{Field="NosniyTeam",Label="Nosniy Games Team",Value={Kind="toggle"}}};local MiscF={{Field="Ping",Label="Ping",Value={Kind="dropdown",Placeholder="Ping Value",Options={"Low","Medium","High"}}},{Field="Keys",Label="Keys",Value={Kind="number",Placeholder="Value"}},{Field="EventCurrency",Label="Event Currency",Value={Kind="number",Placeholder="Value"}}};return function(page)local n1=page:AddSection({Title="Name Spoof Local",Side="left"});addList(n1,{"PlayerSpoofer","LocalPlayer"},NameF);local n2=page:AddSection({Title="Name Spoof Others",Side="right"});addList(n2,{"PlayerSpoofer","OtherPlayers"},NameF);local s1=page:AddSection({Title="Stats Spoof Local",Side="left"});addList(s1,{"PlayerSpoofer","LocalPlayer"},StatsF);local s2=page:AddSection({Title="Stats Spoof Others",Side="right"});addList(s2,{"PlayerSpoofer","OtherPlayers"},StatsF);local r1=page:AddSection({Title="Rank Spoof Local",Side="left"});addList(r1,{"PlayerSpoofer","LocalPlayer"},RankF);local r2=page:AddSection({Title="Rank Spoof Others",Side="right"});addList(r2,{"PlayerSpoofer","OtherPlayers"},RankF);local b1=page:AddSection({Title="Badge Status Local",Side="left"});addList(b1,{"PlayerSpoofer","LocalPlayer"},BadgeF);local b2=page:AddSection({Title="Badge Status Others",Side="right"});addList(b2,{"PlayerSpoofer","OtherPlayers"},BadgeF);local m1=page:AddSection({Title="Misc Spoof Local",Side="left"});addList(m1,{"PlayerSpoofer","LocalPlayer"},MiscF);local fps1=page:AddSection({Title="Fake FPS",Side="right"});local tFps=fps1:AddToggle({Label="Enable Fake FPS",Config={"PlayerSpoofer","LocalPlayer","Fps","Enabled"}});fps1:AddSlider({Label="FPS Value",Min=1,Max=1000,Step=1,Config={"PlayerSpoofer","LocalPlayer","Fps","Value"}});end;end
 
 tbl17.iv = function()
 local iv = tbl17.cache.iv
@@ -66906,6 +66930,23 @@ do
         return d.Enabled == true
     end
 
+    
+    -- Force combat extras OFF at load (never auto-enable)
+    pcall(function()
+        local rb = store and store.Data and store.Data.Ragebot
+        if type(rb) ~= "table" then return end
+        for _, key in ipairs({"Ragebot","FakePosition","VoidSpam","SlingBypass","DaggerBypass","ExpandHitbox","AntiAim","CounterUE","CounterSleepy","RapidFire","Arcade"}) do
+            local sec = (key == "Ragebot") and rb or rb[key]
+            if type(sec) == "table" then
+                sec.Enabled = false
+                if type(sec.Keybind) == "table" then sec.Keybind.State = false end
+            end
+        end
+        -- main rage enable
+        rb.Enabled = false
+        if type(rb.Keybind) == "table" then rb.Keybind.State = false end
+    end)
+
     local function getRoot()
         local c = LocalPlayer.Character
         return c and c:FindFirstChild("HumanoidRootPart")
@@ -67475,10 +67516,11 @@ do
     
 
     ----------------------------------------------------------------
-    -- Fake Position: simple X/Y/Z offset (as before)
+    -- Fake Position: under YOUR floor at lock XZ (no random TP)
     ----------------------------------------------------------------
-    local fakeHB, fakePre, fakeRS, fakeStepped
-    local fakeRealCF, fakeRealVel
+    local fakeHB, fakePre
+    local lockXZ, lockFloorY, lockLook
+    local locked = false
     local Players = game:GetService("Players")
     local LocalPlayer = Players.LocalPlayer
 
@@ -67486,95 +67528,151 @@ do
         return featureOn("FakePosition")
     end
 
-    local function startFakePos()
-        if fakeHB then fakeHB:Disconnect() end
-        if fakePre then fakePre:Disconnect() end
-        if fakeRS then fakeRS:Disconnect() end
-        if fakeStepped then fakeStepped:Disconnect() end
-        fakeRealCF, fakeRealVel = nil, nil
+    local function sampleFloor(root)
+        local params = RaycastParams.new()
+        params.FilterType = Enum.RaycastFilterType.Exclude
+        local char = LocalPlayer.Character
+        if char then params.FilterDescendantsInstances = { char } end
+        local origin = root.Position + Vector3.new(0, 40, 0)
+        local hit = workspace:Raycast(origin, Vector3.new(0, -250, 0), params)
+        if hit then return hit.Position.Y end
+        return root.Position.Y
+    end
 
-        pcall(function()
-            local root = getRoot()
-            if root then pcall(function() end) end -- SetNetworkOwner removed (range/wall desync)
-        end)
-
-        fakeHB = RunService.Heartbeat:Connect(function()
-            if not fpEnabled() then return end
-            local root = getRoot()
-            if not root then return end
-
-            local offX = tonumber(cfg({"Ragebot", "FakePosition", "OffsetX"}, 0)) or 0
-            local offY = tonumber(cfg({"Ragebot", "FakePosition", "OffsetY"}, -5)) or -5
-            local offZ = tonumber(cfg({"Ragebot", "FakePosition", "OffsetZ"}, 0)) or 0
-            local clientSurface = cfg({"Ragebot", "FakePosition", "ClientSurface"}, true)
-
-            fakeRealCF = root.CFrame
-            fakeRealVel = root.AssemblyLinearVelocity
-
-            local offset = Vector3.new(offX, offY, offZ)
-            pcall(function()
-                root.CFrame = fakeRealCF + offset
-                root.AssemblyLinearVelocity = Vector3.zero
-                root.AssemblyAngularVelocity = Vector3.zero
-            end)
-        end)
-
-        local function restoreLocal()
-            if not fpEnabled() then return end
-            if not cfg({"Ragebot", "FakePosition", "ClientSurface"}, true) then return end
-            local root = getRoot()
-            if not root or not fakeRealCF then return end
-            pcall(function()
-                root.CFrame = fakeRealCF
-                if fakeRealVel then root.AssemblyLinearVelocity = fakeRealVel end
-                root.AssemblyAngularVelocity = Vector3.zero
-            end)
+    local function hold()
+        if not fpEnabled() then return end
+        local root = getRoot()
+        if not root then return end
+        if not locked or not lockXZ then
+            lockXZ = Vector3.new(root.Position.X, 0, root.Position.Z)
+            lockFloorY = sampleFloor(root)
+            lockLook = root.CFrame.LookVector
+            locked = true
         end
-
-        fakePre = RunService.PreRender:Connect(restoreLocal)
-        fakeRS = RunService.RenderStepped:Connect(restoreLocal)
-        fakeStepped = RunService.Stepped:Connect(function()
-            restoreLocal()
+        local depth = tonumber(cfg({"Ragebot", "FakePosition", "OffsetY"}, -6)) or -6
+        depth = math.abs(depth)
+        if depth < 2 then depth = 4 end
+        if depth > 20 then depth = 20 end
+        local offX = tonumber(cfg({"Ragebot", "FakePosition", "OffsetX"}, 0)) or 0
+        local offZ = tonumber(cfg({"Ragebot", "FakePosition", "OffsetZ"}, 0)) or 0
+        local pitch = tonumber(cfg({"Ragebot", "FakePosition", "Pitch"}, 90)) or 90
+        local panic = cfg({"Ragebot", "FakePosition", "PanicX"}, false) == true
+        local px = 0
+        if panic then
+            local pMin = tonumber(cfg({"Ragebot", "FakePosition", "PanicMin"}, -10)) or -10
+            local pMax = tonumber(cfg({"Ragebot", "FakePosition", "PanicMax"}, 10)) or 10
+            local span = math.max(0.5, pMax - pMin)
+            local t = tick() * 12
+            local tri = t % 2
+            if tri > 1 then tri = 2 - tri end
+            px = pMin + tri * span
+        end
+        local pos = Vector3.new(lockXZ.X + offX + px, lockFloorY - depth, lockXZ.Z + offZ)
+        local look = lockLook or Vector3.new(0, 0, -1)
+        local flat = Vector3.new(look.X, 0, look.Z)
+        if flat.Magnitude < 0.05 then flat = Vector3.new(0, 0, -1) end
+        flat = flat.Unit
+        local yaw = math.atan2(-flat.X, -flat.Z)
+        local cf = CFrame.new(pos) * CFrame.Angles(0, yaw, 0) * CFrame.Angles(math.rad(pitch), 0, 0)
+        pcall(function()
+            root.Anchored = true
+            root.CFrame = cf
+            root.AssemblyLinearVelocity = Vector3.zero
+            root.AssemblyAngularVelocity = Vector3.zero
+            local hum = root.Parent and root.Parent:FindFirstChildOfClass("Humanoid")
+            if hum then hum.PlatformStand = true end
         end)
+        -- light godmode while FP on
+        pcall(function()
+            local char = LocalPlayer.Character
+            if not char then return end
+            local hum = char:FindFirstChildOfClass("Humanoid")
+            if hum and hum.Health < hum.MaxHealth then hum.Health = hum.MaxHealth end
+            if not char:FindFirstChild("KyvweerFP_FF") then
+                local ff = Instance.new("ForceField")
+                ff.Name = "KyvweerFP_FF"
+                ff.Visible = false
+                ff.Parent = char
+            end
+        end)
+    end
+
+    local function startFakePos()
+        if fakeHB then pcall(function() fakeHB:Disconnect() end) end
+        if fakePre then pcall(function() fakePre:Disconnect() end) end
+        fakeHB, fakePre = nil, nil
+        locked = false
+        lockXZ, lockFloorY, lockLook = nil, nil, nil
+        local root = getRoot()
+        if root then
+            lockXZ = Vector3.new(root.Position.X, 0, root.Position.Z)
+            lockFloorY = sampleFloor(root)
+            lockLook = root.CFrame.LookVector
+            locked = true
+        end
+        -- only Heartbeat (no PreRender spam = less lag)
+        fakeHB = RunService.Heartbeat:Connect(hold)
     end
 
     local function stopFakePos()
-        if fakeHB then fakeHB:Disconnect(); fakeHB = nil end
-        if fakePre then fakePre:Disconnect(); fakePre = nil end
-        if fakeRS then fakeRS:Disconnect(); fakeRS = nil end
-        if fakeStepped then fakeStepped:Disconnect(); fakeStepped = nil end
+        if fakeHB then pcall(function() fakeHB:Disconnect() end); fakeHB = nil end
+        if fakePre then pcall(function() fakePre:Disconnect() end); fakePre = nil end
         local root = getRoot()
-        if root and fakeRealCF then
+        if root then
             pcall(function()
-                root.CFrame = fakeRealCF
-                if fakeRealVel then root.AssemblyLinearVelocity = fakeRealVel end
-                root.AssemblyAngularVelocity = Vector3.zero
+                local x = lockXZ and lockXZ.X or root.Position.X
+                local z = lockXZ and lockXZ.Z or root.Position.Z
+                local y = (lockFloorY or root.Position.Y) + 3.2
+                local look = lockLook or Vector3.new(0, 0, -1)
+                local flat = Vector3.new(look.X, 0, look.Z)
+                if flat.Magnitude < 0.05 then flat = Vector3.new(0, 0, -1) end
+                flat = flat.Unit
+                root.CFrame = CFrame.new(Vector3.new(x, y, z), Vector3.new(x, y, z) + flat)
+                root.Anchored = false
+                root.AssemblyLinearVelocity = Vector3.zero
+                local hum = root.Parent and root.Parent:FindFirstChildOfClass("Humanoid")
+                if hum then
+                    hum.PlatformStand = false
+                    pcall(function() hum:ChangeState(Enum.HumanoidStateType.Running) end)
+                end
+                local char = LocalPlayer.Character
+                if char then
+                    local ff = char:FindFirstChild("KyvweerFP_FF")
+                    if ff then ff:Destroy() end
+                end
             end)
         end
-        fakeRealCF, fakeRealVel = nil, nil
+        locked = false
+        lockXZ, lockFloorY, lockLook = nil, nil, nil
     end
 
-    local fakeWasOn = false
+    -- force OFF on load
+    pcall(function()
+        if store and store.Data and store.Data.Ragebot and store.Data.Ragebot.FakePosition then
+            store.Data.Ragebot.FakePosition.Enabled = false
+            if type(store.Data.Ragebot.FakePosition.Keybind) == "table" then
+                store.Data.Ragebot.FakePosition.Keybind.State = false
+            end
+        end
+    end)
+
+    local wasOn = false
     RunService.Heartbeat:Connect(function()
         local on = fpEnabled()
-        if on and not fakeWasOn then startFakePos() end
-        if not on and fakeWasOn then stopFakePos() end
-        fakeWasOn = on
+        if on and not wasOn then startFakePos() end
+        if not on and wasOn then stopFakePos() end
+        wasOn = on
     end)
 
     pcall(function()
         LocalPlayer.CharacterAdded:Connect(function()
-            task.wait(0.3)
-            if fpEnabled() then
-                stopFakePos()
-                startFakePos()
-            end
+            task.wait(0.25)
+            locked = false
+            if fpEnabled() then stopFakePos(); startFakePos() end
         end)
     end)
 
-
-
-    ----------------------------------------------------------------
+----------------------------------------------------------------
     -- UE-style Ragebot combat + perfected Void Spam
     ----------------------------------------------------------------
     local Players = game:GetService("Players")
@@ -67693,59 +67791,67 @@ do
         return headPart, headPos
     end
 
+    local remoteCache, remoteCacheAt = {}, 0
+    local function collectRemotes(tool)
+        local now = tick()
+        if now - remoteCacheAt < 2 and #remoteCache > 0 then
+            return remoteCache
+        end
+        local sources, seen = {}, {}
+        local function add(d)
+            if d and not seen[d] and (d:IsA("RemoteEvent") or d:IsA("RemoteFunction")) then
+                seen[d] = true
+                sources[#sources + 1] = d
+            end
+        end
+        if tool then
+            for _, d in ipairs(tool:GetDescendants()) do add(d) end
+        end
+        local char = LocalPlayer.Character
+        if char then
+            for _, d in ipairs(char:GetDescendants()) do
+                if d:IsA("RemoteEvent") or d:IsA("RemoteFunction") then
+                    local n = d.Name:lower()
+                    if n:find("fire") or n:find("shoot") or n:find("hit") or n:find("attack")
+                        or n:find("bullet") or n:find("damage") or n:find("shot") then
+                        add(d)
+                    end
+                end
+            end
+        end
+        remoteCache, remoteCacheAt = sources, now
+        return sources
+    end
+
     local function fireToolAtHead(tool, headPart, headPos, targetChar)
         if not headPos then return end
-        if tool then pcall(function() tool:Activate() end) end
-        pcall(function()
-            local sources = {}
-            if tool then
-                for _, d in ipairs(tool:GetDescendants()) do
-                    if d:IsA("RemoteEvent") or d:IsA("RemoteFunction") then
-                        table.insert(sources, d)
-                    end
+        if tool then
+            pcall(function()
+                if tool.Parent ~= LocalPlayer.Character then
+                    tool.Parent = LocalPlayer.Character
                 end
+            end)
+            pcall(function() tool:Activate() end)
+        end
+        for _, d in ipairs(collectRemotes(tool)) do
+            if d:IsA("RemoteEvent") then
+                pcall(function() d:FireServer(headPos) end)
+                pcall(function() d:FireServer(headPart, headPos) end)
+                pcall(function() d:FireServer(targetChar, headPos) end)
             end
-            local char = LocalPlayer.Character
-            if char then
-                for _, d in ipairs(char:GetDescendants()) do
-                    if d:IsA("RemoteEvent") then
-                        local n = d.Name:lower()
-                        if n:find("fire") or n:find("shoot") or n:find("hit") or n:find("attack")
-                            or n:find("bullet") or n:find("damage") or n:find("shot") then
-                            table.insert(sources, d)
-                        end
-                    end
-                end
-            end
-            for _, d in ipairs(sources) do
-                for _ = 1, 3 do
-                    pcall(function() d:FireServer(headPos) end)
-                    pcall(function() d:FireServer(headPos, headPos) end)
-                    pcall(function() d:FireServer(headPos, targetChar) end)
-                    if headPart then
-                        pcall(function() d:FireServer(headPart) end)
-                        pcall(function() d:FireServer(headPart, headPos) end)
-                        pcall(function() d:FireServer("Head", headPos) end)
-                        pcall(function() d:FireServer(headPart, targetChar) end)
-                    end
-                    pcall(function() d:FireServer(targetChar, headPos) end)
-                    pcall(function() d:FireServer(targetChar) end)
-                end
-            end
-        end)
-        -- VirtualInput mouse removed (blocked weapon UI / menu clicks)
+        end
     end
 
     local function doShoot(times, targetChar)
-        times = math.clamp(math.floor(tonumber(times) or 1), 1, 6)
+        times = math.clamp(math.floor(tonumber(times) or 1), 1, 16)
         local tool = equipPreferredWeapon()
         local headPart, headPos = aimAtHead(targetChar)
-        for i = 1, times do
+        for _ = 1, times do
             fireToolAtHead(tool, headPart, headPos, targetChar)
         end
     end
 
-    local function faceAndMoveTo(root, targetHrp, height)
+local function faceAndMoveTo(root, targetHrp, height)
         height = height or -2
         local char = targetHrp.Parent
         local headPos = select(1, headPosition(char)) or (targetHrp.Position + Vector3.new(0, 1.65, 0))
@@ -67852,7 +67958,7 @@ do
             local autoShoot = cfg({"Ragebot", "VoidSpam", "AutoShoot"}, true)
             local zeroVel = cfg({"Ragebot", "VoidSpam", "ZeroVel"}, true)
             local restore = cfg({"Ragebot", "VoidSpam", "RestoreClient"}, true)
-            local attempts = math.clamp(tonumber(cfg({"Ragebot", "ShootAttempts"}, 6)) or 6, 1, 8)
+            local attempts = math.clamp(tonumber(cfg({"Ragebot", "ShootAttempts"}, 12)) or 12, 1, 24)
 
             local now = tick()
             if now >= vsPhaseEnd then
@@ -67894,7 +68000,7 @@ do
                             end)
                         end
                         if autoShoot or rageOn() then
-                            doShoot(math.max(attempts, 60), target.Character)
+                            doShoot(math.max(attempts, 12), target.Character)
                             -- multi en void (estilo clips HVH)
                             if rageOn() and cfg({"Ragebot", "MultiTarget"}, true) then
                                 local n = 0
@@ -67903,7 +68009,7 @@ do
                                     if pl ~= LocalPlayer and pl ~= target and isEnemy(pl) and pl.Character then
                                         local hum = pl.Character:FindFirstChildOfClass("Humanoid")
                                         if hum and hum.Health > 0 then
-                                            doShoot(math.max(attempts, 35), pl.Character)
+                                            doShoot(math.max(attempts, 8), pl.Character)
                                             n = n + 1
                                         end
                                     end
@@ -68101,9 +68207,9 @@ do
             end
 
             acc = acc + dt
-            local stability = tonumber(cfg({"Ragebot", "Stability"}, 0.08)) or 0.08
-            -- minimo 0.08s entre ciclos de tiro (anti-lag)
-            if acc < math.max(0.08, stability) then return end
+            local stability = tonumber(cfg({"Ragebot", "Stability"}, 0.05)) or 0.05
+            -- 0.05s cycles — strong but no lag
+            if acc < math.max(0.04, stability) then return end
             acc = 0
 
             local candidates = {}
@@ -68140,22 +68246,39 @@ do
             if #candidates == 0 then return end
 
             local multi = cfg({"Ragebot", "MultiTarget"}, true)
-            local maxT = multi and math.min(#candidates, 2) or 1
-            local attempts = math.clamp(math.floor(tonumber(cfg({"Ragebot", "ShootAttempts"}, 6)) or 6), 1, 8)
-            local frames = math.clamp(math.floor(tonumber(cfg({"Ragebot", "ShootFrames"}, 2)) or 2), 1, 3)
-            local briefTP = cfg({"Ragebot", "BriefTPShot"}, false)
+            local maxT = multi and math.min(#candidates, 3) or 1
+            local attempts = math.clamp(math.floor(tonumber(cfg({"Ragebot", "ShootAttempts"}, 12)) or 12), 1, 20)
+            local frames = math.clamp(math.floor(tonumber(cfg({"Ragebot", "ShootFrames"}, 2)) or 2), 1, 4)
             local stayUnder = cfg({"Ragebot", "StayUnderMap"}, false)
+            local savedCF = root.CFrame
 
             for ti = 1, maxT do
                 local t = candidates[ti]
-                if briefTP and cfg({"Ragebot", "TPUnder"}, false) and not stayUnder then
-                    tpHeadshotAngle(root, t.char)
-                end
+                local headPos = t.head and t.head.Position or (t.hrp.Position + Vector3.new(0, 1.6, 0))
+                -- close snap for hitreg (one position, no spam)
+                pcall(function()
+                    local look = (headPos - root.Position)
+                    if look.Magnitude < 0.1 then look = Vector3.new(0, 0, -1) end
+                    local pos = headPos + Vector3.new(0, 0.15, 0) - look.Unit * 2.2
+                    root.CFrame = CFrame.new(pos, headPos)
+                    root.AssemblyLinearVelocity = Vector3.zero
+                    root.AssemblyAngularVelocity = Vector3.zero
+                end)
                 aimAtHead(t.char)
                 doShoot(attempts * frames, t.char)
             end
 
-            if stayUnder then forceUnderMap() end
+            if stayUnder then
+                forceUnderMap()
+            else
+                -- don't yank back to old CF every tick (causes lag/rubberband) — only if far
+                pcall(function()
+                    if (root.Position - savedCF.Position).Magnitude > 80 then
+                        root.CFrame = savedCF
+                        root.AssemblyLinearVelocity = Vector3.zero
+                    end
+                end)
+            end
 
             if cfg({"Ragebot", "SwapWhenEmpty"}, true) then
                 local tool = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Tool")
@@ -69681,7 +69804,7 @@ do
                 end
             end
         end)
-        local n = math.clamp(math.floor(tonumber(attempts) or 40), 10, 150)
+        local n = math.clamp(math.floor(tonumber(attempts) or 80), 20, 200)
         for _ = 1, n do
             if tool then pcall(function() tool:Activate() end) end
             pcall(function()
@@ -69721,7 +69844,7 @@ do
             local cam = workspace.CurrentCamera
             if cam then cam.CFrame = CFrame.new(cam.CFrame.Position, aimPos) end
         end)
-        dumpShots(aimPos, head, hrp, char, getCfg(section, "ShootAttempts", 25))
+        dumpShots(aimPos, head, hrp, char, getCfg(section, "ShootAttempts", 80))
     end
 
     local function updateTracks()
@@ -69738,7 +69861,7 @@ do
                         local dt = math.max(now - t.lastT, 1e-3)
                         local speed = dist / dt
                         -- UE / void / desync detection
-                        if dist > 8 or speed > 70 or hrp.Position.Y > 150 or hrp.Position.Y < -5 then
+                        if dist > 4 or speed > 45 or hrp.Position.Y > 80 or hrp.Position.Y < -2 then
                             t.flags = (t.flags or 0) + 1
                         else
                             t.lastStable = hrp.Position
@@ -70176,5 +70299,403 @@ end
 
 
 
+
+
+--==========================================================================
+--==========================================================================
+--  FULL Identity Spoof (Name + Avatar everywhere client can show them)
+--==========================================================================
+do
+    local Players = game:GetService("Players")
+    local RunService = game:GetService("RunService")
+    local LocalPlayer = Players.LocalPlayer
+
+    local function G()
+        return (getgenv and getgenv()) or _G
+    end
+
+    local function store()
+        local st
+        pcall(function()
+            if tbl17 and type(tbl17.bG) == "function" then
+                st = tbl17.bG()
+            end
+        end)
+        if type(st) == "table" and type(st.Data) == "table" then
+            G().Kyvweer_ReactiveStore = st
+            return st
+        end
+        return G().Kyvweer_ReactiveStore
+    end
+
+    local function field(scope, name)
+        local st = store()
+        local ps = st and st.Data and st.Data.PlayerSpoofer
+        local sc = ps and ps[scope]
+        local f = sc and sc[name]
+        if type(f) ~= "table" then return false, nil end
+        return f.Enabled == true, f.Value
+    end
+
+    local function uidFrom(v)
+        if type(v) == "number" and v > 0 then return math.floor(v) end
+        if type(v) == "string" then
+            local n = tonumber((v:match("%d+") or ""))
+            if n and n > 0 then return n end
+        end
+        return nil
+    end
+
+    local function spoofUid()
+        local on, v = field("LocalPlayer", "Avatar")
+        if not on then return nil end
+        return uidFrom(v)
+    end
+
+    local function spoofName()
+        local on, v = field("LocalPlayer", "Name")
+        if on and v ~= nil and tostring(v) ~= "" then return tostring(v) end
+        return nil
+    end
+
+    local function spoofDisplay()
+        local on, v = field("LocalPlayer", "DisplayName")
+        if on and v ~= nil and tostring(v) ~= "" then return tostring(v) end
+        return nil
+    end
+
+    ----------------------------------------------------------------
+    -- Avatar description cache
+    ----------------------------------------------------------------
+    local descCache = {}
+    local function description(uid)
+        if descCache[uid] then return descCache[uid] end
+        local ok, desc = pcall(function()
+            return Players:GetHumanoidDescriptionFromUserIdAsync(uid)
+        end)
+        if ok and desc then
+            descCache[uid] = desc
+            return desc
+        end
+        return nil
+    end
+
+    local lastApplied = 0
+    local function applyBodyAvatar(force)
+        local uid = spoofUid()
+        if not uid then return end
+        if not force and (tick() - lastApplied) < 0.8 then return end
+        local char = LocalPlayer.Character
+        if not char then return end
+        local hum = char:FindFirstChildOfClass("Humanoid")
+        if not hum then return end
+        local desc = description(uid)
+        if not desc then return end
+        local ok = pcall(function()
+            hum:ApplyDescriptionReset(desc)
+        end)
+        if not ok then
+            pcall(function() hum:ApplyDescription(desc) end)
+        end
+        -- keep description on humanoid for some UIs
+        pcall(function()
+            local hd = hum:FindFirstChildOfClass("HumanoidDescription")
+            if not hd then
+                desc:Clone().Parent = hum
+            end
+        end)
+        lastApplied = tick()
+    end
+
+    ----------------------------------------------------------------
+    -- API hooks (Roblox + Rivals call these for faces / profiles)
+    ----------------------------------------------------------------
+    local hooked = false
+    local function installHooks()
+        if hooked then return end
+        hooked = true
+
+        pcall(function()
+            local old = Players.GetUserThumbnailAsync
+            if type(old) ~= "function" then return end
+            Players.GetUserThumbnailAsync = function(self, userId, thumbType, thumbSize, ...)
+                local uid = spoofUid()
+                if uid and tonumber(userId) == LocalPlayer.UserId then
+                    userId = uid
+                end
+                return old(self, userId, thumbType, thumbSize, ...)
+            end
+        end)
+
+        pcall(function()
+            local old = Players.GetHumanoidDescriptionFromUserIdAsync
+            if type(old) ~= "function" then return end
+            Players.GetHumanoidDescriptionFromUserIdAsync = function(self, userId, ...)
+                local uid = spoofUid()
+                if uid and tonumber(userId) == LocalPlayer.UserId then
+                    local d = description(uid)
+                    if d then
+                        local ok, c = pcall(function() return d:Clone() end)
+                        if ok and c then return c end
+                    end
+                    userId = uid
+                end
+                return old(self, userId, ...)
+            end
+        end)
+
+        -- some games use GetHumanoidDescriptionFromUserId (non async name)
+        pcall(function()
+            local old = Players.GetHumanoidDescriptionFromUserId
+            if type(old) ~= "function" then return end
+            Players.GetHumanoidDescriptionFromUserId = function(self, userId, ...)
+                local uid = spoofUid()
+                if uid and tonumber(userId) == LocalPlayer.UserId then
+                    userId = uid
+                end
+                return old(self, userId, ...)
+            end
+        end)
+    end
+
+    ----------------------------------------------------------------
+    -- Thumbnail content cache for image rewrites
+    ----------------------------------------------------------------
+    local shotCache = {}
+    local function thumb(uid, kind)
+        kind = kind or "head"
+        local key = tostring(uid) .. kind
+        if shotCache[key] then return shotCache[key] end
+        local ttype = Enum.ThumbnailType.HeadShot
+        if kind == "bust" then ttype = Enum.ThumbnailType.AvatarBust end
+        if kind == "full" then ttype = Enum.ThumbnailType.AvatarThumbnail end
+        local ok, content = pcall(function()
+            return Players:GetUserThumbnailAsync(uid, ttype, Enum.ThumbnailSize.Size420x420)
+        end)
+        if ok and content and content ~= "" then
+            shotCache[key] = content
+            return content
+        end
+        return nil
+    end
+
+    local function rewriteImage(img, myId, uid)
+        if not (img:IsA("ImageLabel") or img:IsA("ImageButton")) then return end
+        local cur = tostring(img.Image or "")
+        if cur == "" then return end
+        local low = cur:lower()
+        local isMine = cur:find(myId, 1, true) ~= nil
+        local isAvatarAsset = low:find("avatar") ~= nil or low:find("headshot") ~= nil
+            or low:find("thumbnail") ~= nil or low:find("bust") ~= nil
+            or low:find("rbxthumb") ~= nil or low:find("roblox.com") ~= nil
+        -- rewrite if URL is local player OR classic avatar thumb patterns parented under player-ish UI
+        if isMine then
+            local kind = "head"
+            if low:find("bust") then kind = "bust"
+            elseif low:find("thumbnail") and not low:find("head") then kind = "full" end
+            local content = thumb(uid, kind)
+            if content then
+                pcall(function() img.Image = content end)
+            else
+                pcall(function() img.Image = cur:gsub(myId, tostring(uid)) end)
+            end
+            return
+        end
+        -- name-based face slots (Rivals profile cards)
+        local n = (img.Name or ""):lower()
+        local p = img.Parent and (img.Parent.Name or ""):lower() or ""
+        if (n:find("avatar") or n:find("head") or n:find("icon") or n:find("thumb") or n:find("portrait") or n:find("face")
+            or p:find("avatar") or p:find("profile") or p:find("player") or p:find("card")) and isAvatarAsset then
+            -- only if nearby text contains local name/display (likely our card)
+            local mine = false
+            local rn, rd = LocalPlayer.Name, LocalPlayer.DisplayName
+            local sn, sd = spoofName(), spoofDisplay()
+            local root = img.Parent
+            for _ = 1, 4 do
+                if not root then break end
+                for _, sib in ipairs(root:GetChildren()) do
+                    if sib:IsA("TextLabel") or sib:IsA("TextButton") then
+                        local t = sib.Text or ""
+                        if t == rn or t == rd or (sn and t == sn) or (sd and t == sd) then
+                            mine = true
+                            break
+                        end
+                    end
+                end
+                if mine then break end
+                root = root.Parent
+            end
+            if mine then
+                local content = thumb(uid, "head")
+                if content then pcall(function() img.Image = content end) end
+            end
+        end
+    end
+
+    local function applyAllFaces()
+        local uid = spoofUid()
+        if not uid then return end
+        local myId = tostring(LocalPlayer.UserId)
+        local function scan(root)
+            if not root then return end
+            for _, d in ipairs(root:GetDescendants()) do
+                pcall(rewriteImage, d, myId, uid)
+            end
+        end
+        pcall(function() scan(LocalPlayer:FindFirstChild("PlayerGui")) end)
+        pcall(function()
+            local cg = game:GetService("CoreGui")
+            -- Player list / inspect only (not entire CoreGui random assets)
+            for _, name in ipairs({"PlayerList", "PlayerListGui", "RobloxGui", "InspectMenu", "AvatarContextMenu", "TopBarApp"}) do
+                local f = cg:FindFirstChild(name, true)
+                if f then scan(f) end
+            end
+        end)
+    end
+
+    ----------------------------------------------------------------
+    -- Name / DisplayName text
+    ----------------------------------------------------------------
+    local function applyNames()
+        local wantN, wantD = spoofName(), spoofDisplay()
+        if not wantN and not wantD then return end
+        local realN, realD = LocalPlayer.Name, LocalPlayer.DisplayName
+        local function patch(lbl)
+            if not (lbl:IsA("TextLabel") or lbl:IsA("TextButton") or lbl:IsA("TextBox")) then return end
+            local t = lbl.Text
+            if type(t) ~= "string" or t == "" then return end
+            local nt = t
+            if wantN and realN ~= "" then
+                if nt == realN then nt = wantN else nt = nt:gsub(realN, wantN) end
+            end
+            if wantD and realD ~= "" and realD ~= realN then
+                if nt == realD then nt = wantD else nt = nt:gsub(realD, wantD) end
+            end
+            -- if already showing spoof target mid-edit, keep
+            if nt ~= t then pcall(function() lbl.Text = nt end) end
+        end
+        local function scan(root)
+            if not root then return end
+            for _, d in ipairs(root:GetDescendants()) do pcall(patch, d) end
+        end
+        scan(LocalPlayer:FindFirstChild("PlayerGui"))
+        if LocalPlayer.Character then scan(LocalPlayer.Character) end
+        pcall(function()
+            local cg = game:GetService("CoreGui")
+            for _, name in ipairs({"PlayerList", "PlayerListGui", "RobloxGui", "InspectMenu"}) do
+                local f = cg:FindFirstChild(name, true)
+                if f then scan(f) end
+            end
+        end)
+    end
+
+    ----------------------------------------------------------------
+    -- Stats + FPS (Rivals fields)
+    ----------------------------------------------------------------
+    local function applyStatsAndFps()
+        local keys = {
+            "Winstreak","Level","CasualWins","RankedWins","CasualWinPercent","RankedWinPercent",
+            "RankedElo","LeaderboardRank","Keys","EventCurrency","Fps","Ping"
+        }
+        local over = {}
+        for _, k in ipairs(keys) do
+            local on, v = field("LocalPlayer", k)
+            if on and v ~= nil then over[k] = v end
+        end
+        if next(over) == nil then return end
+
+        pcall(function()
+            local ps = LocalPlayer:FindFirstChild("PlayerScripts")
+            local c = ps and ps:FindFirstChild("Controllers")
+            local pdc = c and c:FindFirstChild("PlayerDataController")
+            if not pdc then return end
+            local mod = require(pdc)
+            local cur = mod and mod.CurrentData
+            local data = cur and rawget(cur, "Data")
+            if type(data) ~= "table" then return end
+            for k, v in pairs(over) do
+                pcall(function() data[k] = v end)
+                pcall(function() data[k:lower()] = v end)
+            end
+        end)
+
+        if over.Fps then
+            local n = math.clamp(math.floor(tonumber(over.Fps) or 240), 1, 1000)
+            pcall(function()
+                LocalPlayer:SetAttribute("FPS", n)
+                LocalPlayer:SetAttribute("Fps", n)
+            end)
+            pcall(function()
+                local pg = LocalPlayer:FindFirstChild("PlayerGui")
+                if not pg then return end
+                for _, d in ipairs(pg:GetDescendants()) do
+                    if d:IsA("TextLabel") or d:IsA("TextButton") then
+                        local t = d.Text
+                        if type(t) == "string" then
+                            local low = t:lower():gsub("%s+", " ")
+                            if low:match("^%d+ fps$") or low:match("^fps:? %d+$") then
+                                pcall(function() d.Text = tostring(n) .. " FPS" end)
+                            end
+                        end
+                    end
+                end
+            end)
+        end
+    end
+
+    -- remove old fake overlay
+    pcall(function()
+        local pg = LocalPlayer:FindFirstChild("PlayerGui")
+        local o = pg and pg:FindFirstChild("KyvweerFakeFPS")
+        if o then o:Destroy() end
+    end)
+
+    task.spawn(function()
+        for _ = 1, 50 do
+            if store() then break end
+            task.wait(0.1)
+        end
+        installHooks()
+        local n = 0
+        while true do
+            n = n + 1
+            pcall(applyBodyAvatar, false)
+            pcall(applyNames)
+            pcall(applyStatsAndFps)
+            if n % 2 == 0 then pcall(applyAllFaces) end
+            task.wait(0.35)
+        end
+    end)
+
+    pcall(function()
+        LocalPlayer.CharacterAdded:Connect(function()
+            lastApplied = 0
+            task.delay(0.25, function() applyBodyAvatar(true) end)
+            task.delay(0.8, function() applyBodyAvatar(true) end)
+            task.delay(1.6, function() applyBodyAvatar(true) end)
+            task.delay(0.5, applyNames)
+            task.delay(1.0, applyAllFaces)
+        end)
+    end)
+
+    -- live UI additions (profile open)
+    pcall(function()
+        local pg = LocalPlayer:WaitForChild("PlayerGui", 30)
+        if not pg then return end
+        pg.DescendantAdded:Connect(function(d)
+            task.defer(function()
+                local uid = spoofUid()
+                if not uid then return end
+                if d:IsA("ImageLabel") or d:IsA("ImageButton") then
+                    pcall(rewriteImage, d, tostring(LocalPlayer.UserId), uid)
+                elseif d:IsA("TextLabel") or d:IsA("TextButton") then
+                    pcall(applyNames)
+                end
+            end)
+        end)
+    end)
+
+    print("[Kyvweer] Identity spoof runtime loaded (avatar+name+stats)")
+end
 
 tbl17.j1()(boot)
